@@ -10,166 +10,168 @@ Schema = mongoose.Schema;
 ObjectId = Schema.ObjectId;
 
 BookOffer = new Schema({
-	localId : String,
-	book : {
-		type: ObjectId,
-		ref: 'Book'
-	},
-	editure : {
-		type: ObjectId,
-		ref: 'Editure'
-	},
-	description : String,
-	launchYear : Number,
-	price : Number,
-	currency : String,
-	available : Boolean,
-	isbn : String,
-	reviewsList : [{
-		type: ObjectId,
-        ref: 'Review'
-	}],
-	owner : String,
-	url : String
+    localId: String,
+    book: {
+        type: ObjectId,
+        ref: 'Book'
+    },
+    editure: {
+        type: ObjectId,
+        ref: 'Editure'
+    },
+    description: String,
+    launchYear: Number,
+    price: Number,
+    currency: String,
+    available: Boolean,
+    isbn: String,
+    reviewsList: [
+        {
+            type: ObjectId,
+            ref: 'Review'
+        }
+    ],
+    owner: String,
+    url: String
 }, {
-	collection : 'bc_book_offers'
+    collection: 'bc_book_offers'
 });
 
 /**
- * 	Finds a book offer by id.
+ *     Finds a book offer by id.
  *
  * */
-BookOffer.static('findById', function(id, callback) {
-	this.findOne({
-		_id : id
-	}).exec(function(err, bookOffer) {
-		if (err) {
-			return callback(err, null);
-		} else {
-			console.log("BOOK OFFER FOUND BY ID!");
-			return callback(null, bookOffer);
-		}
-	});
+BookOffer.static('findById', function (id, callback) {
+    this.findOne({
+        _id: id
+    }).exec(function (err, bookOffer) {
+            if (err) {
+                return callback(err, null);
+            } else {
+                console.log("BOOK OFFER FOUND BY ID!");
+                return callback(null, bookOffer);
+            }
+        });
 });
 
 /**
- *	Retrieves all the book offers from the database.
+ *    Retrieves all the book offers from the database.
  *
  * */
-BookOffer.static('findAll', function(callback) {
-	this.find({}).populate('book').populate('editure').populate('reviewsList').exec(function(err, bookOffers) {
-		if (err) {
-			return callback(err);
-		} else {
-			console.log("RETRIEVING ALL BOOK OFFERS FROM THE DB...");
-			return callback(null, booksOffers);
-		}
-	});
+BookOffer.static('findAll', function (callback) {
+    this.find({}).populate('book').populate('editure').populate('reviewsList').exec(function (err, bookOffers) {
+        if (err) {
+            return callback(err);
+        } else {
+            console.log("RETRIEVING ALL BOOK OFFERS FROM THE DB...");
+            return callback(null, booksOffers);
+        }
+    });
 });
 
 /**
  *  Find a book offer by the book's title and the owner's name.
  *
  * */
-BookOffer.static('findByBookTitleAndOwner', function(bookTitle, owner, callback){
+BookOffer.static('findByBookTitleAndOwner', function (bookTitle, owner, callback) {
     this.find({
         owner: owner
-    }).populate('book').populate('editure').populate('reviewsList').exec(function(err, offers){
-        if(err){
-            return callback(err, null);
-        } else {
-            for(var i=0; i<offers.length; i++){
-                if(offers[i].book!=null && offers[i].book.title!=null && offers[i].book.title==bookTitle){
-                    return callback(null, offers[i]);
+    }).populate('book').populate('editure').populate('reviewsList').exec(function (err, offers) {
+            if (err) {
+                return callback(err, null);
+            } else {
+                for (var i = 0; i < offers.length; i++) {
+                    if (offers[i].book != null && offers[i].book.title != null && offers[i].book.title == bookTitle) {
+                        return callback(null, offers[i]);
+                    }
                 }
-            }
 
-            // offer not found
-            return callback(null, 404);
-        }
-    });
+                // offer not found
+                return callback(null, 404);
+            }
+        });
 });
 
- /**
- * 	Updates the details of a book offer.
+/**
+ *     Updates the details of a book offer.
  *
  * */
-BookOffer.static('update', function(id, book, editure, description, launchYear, price, currency, available, isbn, reviewsList, owner, url) {
-	console.log("UPDATED BOOK OFFER!");
-	this.findOne({
-		_id : id
-	}).exec(function(err, bookOffer) {
-		if (err) {
-			return callback(err);
-		} else {
-			if(book!=null){
-				bookOffer.book = book;	
-			}
-			
-			if(authors!=null){
-				bookOffer.authors = authors;	
-			}
-			
-			if(editure!=null){
-				bookOffer.editure = editure;	
-			}
-			
-			if(description!=null){
-				bookOffer.description = description;	
-			}
-			
-			if(launchYear!=null){
-				bookOffer.launchYear = launchYear;	
-			}
-			
-			if(price!=null){
-				bookOffer.price = price;	
-			}
-			
-			if(currency!=null){
-				bookOffer.currency = currency;	
-			}
-			
-			if(available!=null){
-				bookOffer.available = available;	
-			}
-			
-			if(isbn!=null){
-				bookOffer.isbn = isbn;	
-			}
-			
-			if(reviewsList!=null){
-				bookOffer.reviewsList = reviewsList;	
-			}
-			
-			if(owner!=null){
-				bookOffer.owner = owner;	
-			}
-			
-			if(url!=null){
-				bookOffer.url = url;	
-			}
+BookOffer.static('update', function (id, book, editure, description, launchYear, price, currency, available, isbn, reviewsList, owner, url) {
+    console.log("UPDATED BOOK OFFER!");
+    this.findOne({
+        _id: id
+    }).exec(function (err, bookOffer) {
+            if (err) {
+                return callback(err);
+            } else {
+                if (book != null) {
+                    bookOffer.book = book;
+                }
 
-			bookOffer.save();
+                if (authors != null) {
+                    bookOffer.authors = authors;
+                }
 
-			return callback(null, bookOffer);
-		}
-	});
+                if (editure != null) {
+                    bookOffer.editure = editure;
+                }
+
+                if (description != null) {
+                    bookOffer.description = description;
+                }
+
+                if (launchYear != null) {
+                    bookOffer.launchYear = launchYear;
+                }
+
+                if (price != null) {
+                    bookOffer.price = price;
+                }
+
+                if (currency != null) {
+                    bookOffer.currency = currency;
+                }
+
+                if (available != null) {
+                    bookOffer.available = available;
+                }
+
+                if (isbn != null) {
+                    bookOffer.isbn = isbn;
+                }
+
+                if (reviewsList != null) {
+                    bookOffer.reviewsList = reviewsList;
+                }
+
+                if (owner != null) {
+                    bookOffer.owner = owner;
+                }
+
+                if (url != null) {
+                    bookOffer.url = url;
+                }
+
+                bookOffer.save();
+
+                return callback(null, bookOffer);
+            }
+        });
 
 });
 
 /**
- * 	Removes a book offer from the db.
- * 
+ *     Removes a book offer from the db.
+ *
  * */
-BookOffer.static('remove', function(id){
-	console.log('REMOVED BOOK OFFEr!');
-	this.findOne({_id: id}).exec(function(err, bookOffer){
-		if(err===null && bookOffer!==null){
-			bookOffer.remove();
-			return;
-		}
-	});
+BookOffer.static('remove', function (id) {
+    console.log('REMOVED BOOK OFFEr!');
+    this.findOne({_id: id}).exec(function (err, bookOffer) {
+        if (err === null && bookOffer !== null) {
+            bookOffer.remove();
+            return;
+        }
+    });
 });
 
 module.exports = mongoose.model('BookOffer', BookOffer); 

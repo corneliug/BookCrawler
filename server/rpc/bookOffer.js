@@ -34,11 +34,11 @@ exports.actions = function (req, res, ss) {
             });
         },
 
-        findByBookTitleAndOwner: function(bookTitle, owner){
-            BookOffer.findByBookTitleAndOwner(bookTitle, owner, function(err, offer){
+        findByBookTitleAndOwner: function (bookTitle, owner) {
+            BookOffer.findByBookTitleAndOwner(bookTitle, owner, function (err, offer) {
                 if (err || offer === null) {
                     return res('heresy');
-                } else if (offer == 404){
+                } else if (offer == 404) {
                     return res(404);
                 } else {
                     return res(offer);

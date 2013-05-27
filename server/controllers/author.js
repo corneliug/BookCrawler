@@ -2,11 +2,11 @@ var Author = require(__dirname + "/../models/author.js");
 
 module.exports = {
     /**
-     * 	Finds an author by id.
+     *     Finds an author by id.
      *
      * */
-    findById : function(id) {
-        Author.findById(id, function(err, author) {
+    findById: function (id) {
+        Author.findById(id, function (err, author) {
             if (err != null) {
                 return author;
             } else {
@@ -19,9 +19,9 @@ module.exports = {
      *  Finds an author by its name in the db.
      *
      * */
-    findByName: function(name, callback){
-        Author.findByName(name, function(err, author){
-            if(author==null){
+    findByName: function (name, callback) {
+        Author.findByName(name, function (err, author) {
+            if (author == null) {
                 return callback('heresy');
             } else {
                 return callback(author);
@@ -30,11 +30,11 @@ module.exports = {
     },
 
     /**
-     *	Retrieves all authors from the database.
+     *    Retrieves all authors from the database.
      *
      * */
-    findAll : function() {
-        Author.findAll(function(err, authors) {
+    findAll: function () {
+        Author.findAll(function (err, authors) {
             if (err != null) {
                 return authors;
             } else {
@@ -44,16 +44,16 @@ module.exports = {
     },
 
     /**
-     * 	Removes an author from the db.
+     *     Removes an author from the db.
      *
      * */
-    remove : function(id) {
-        Author.remove(id, function() {
+    remove: function (id) {
+        Author.remove(id, function () {
         });
     },
 
-    filter: function(author, book){
-        Author.findByName(author.name, function(err, existentAuthor){
+    filter: function (author, book) {
+        Author.findByName(author.name, function (err, existentAuthor) {
             var authorUpdates;
 
             if (existentAuthor != null && !err) {
@@ -78,7 +78,7 @@ module.exports = {
                     existentAuthor.books.push(book);
                 }
 
-                if(authorUpdates){
+                if (authorUpdates) {
                     edit(existentAuthor);
                 }
             } else {
@@ -87,14 +87,14 @@ module.exports = {
         });
     }
 
-  };
+};
 
 /**
- * 	Updates the details of an author.
+ *     Updates the details of an author.
  *
  * */
-var edit = function(author) {
-    Author.edit(author.id, author.name, author.books, function(err, author) {
+var edit = function (author) {
+    Author.edit(author.id, author.name, author.books, function (err, author) {
         if (err != null) {
             return author;
         } else {
