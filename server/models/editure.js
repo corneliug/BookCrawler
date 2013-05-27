@@ -49,10 +49,26 @@ Editure.static('findAll', function(callback) {
 });
 
 /**
+ *  Finds an editure by its name.
+ *
+ * */
+Editure.static('findByName', function(name, callback){
+    this.findOne({
+        name: name
+    }).populate('books').exec(function(err, editure){
+        if(err || editure==null){
+            return callback(err, null);
+        } else {
+            return callback(null, editure);
+        }
+    });
+});
+
+/**
  * 	Updates the details of a Editure.
  *
  * */
-Editure.static('edit', function(id, name, books) {
+Editure.static('update', function(id, name, books) {
 	console.log("UPDATED Editure DETAILS!");
 	this.findOne({
 		_id : id

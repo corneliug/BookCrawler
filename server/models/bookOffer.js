@@ -57,7 +57,7 @@ BookOffer.static('findById', function(id, callback) {
  *
  * */
 BookOffer.static('findAll', function(callback) {
-	this.find({}).populate('editure').populate('reviewsList').exec(function(err, bookOffers) {
+	this.find({}).populate('book').populate('editure').populate('reviewsList').exec(function(err, bookOffers) {
 		if (err) {
 			return callback(err);
 		} else {
@@ -68,10 +68,33 @@ BookOffer.static('findAll', function(callback) {
 });
 
 /**
+ *  Find a book offer by the book's title and the owner's name.
+ *
+ * */
+BookOffer.static('findByBookTitleAndOwner', function(bookTitle, owner, callback){
+    this.find({
+        owner: owner
+    }).populate('book').populate('editure').populate('reviewsList').exec(function(err, offers){
+        if(err){
+            return callback(err, null);
+        } else {
+            for(var i=0; i<offers.length; i++){
+                if(offers[i].book!=null && offers[i].book.title!=null && offers[i].book.title==bookTitle){
+                    return callback(null, offers[i]);
+                }
+            }
+
+            // offer not found
+            return callback(null, 404);
+        }
+    });
+});
+
+ /**
  * 	Updates the details of a book offer.
  *
  * */
-BookOffer.static('edit', function(id, book, editure, description, launchYear, price, currency, available, isbn, reviewsList, owner, url) {
+BookOffer.static('update', function(id, book, editure, description, launchYear, price, currency, available, isbn, reviewsList, owner, url) {
 	console.log("UPDATED BOOK OFFER!");
 	this.findOne({
 		_id : id

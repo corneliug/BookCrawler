@@ -1,138 +1,75 @@
-var User = require(__dirname + "/../models/user.js");
+var Author = require(__dirname + "/../models/author.js");
 
 exports.actions = function(req, res, ss) {
 
   req.use('session');
   
   return {
-	
-	/**
-	 *   Authenticates an user by his email and password.
-	 * 
-	 *   It also saves the user on the session, with the 
-	 * main purpose of authorizing actions in the application.
-	 * 
-	 * */
-    authenticate: function(data) {
-    	var username = data.username;
-    	var password = data.password;
-    	User.authenticate(username, password, function(err, user) {
-    		if(err || user===null){
-    			return res('heresy');
-    		}else{
-    			req.session.setUserId(user);	
-    			return res(user);
-    		}	
-	    });
-    },
-    /**
-     * 	Loggs out the user.
-     * 
-     * */
-   logout: function(){
-   	  ensureAuthenticated(req, res, function(){
-   	  	console.log("Logging out...");
-     	req.session.setUserId(null);
-     	return ;
-   	  });
-   },
-    /**
-	 *	Retrieves all the users from the database.
-	 * 
-	 * */
-    findAll: function(){
-    	User.findAll(function(err, users){
-    		if(err || users===null){
-    			return res('heresy');
-    		}else{
-    			return res(users);
-    		}
-    	});
-    },
-    /**
-	 * 	Finds an user by his email address.
-	 * 
-	 * */
-    findByEmail: function(email){
-    	User.findByEmail(email, function(err, user){
-    		if(err || user===null){
-    			return res.send('heresy');
-    		}else{
-    			return res(user);
-    		}
-    	});
-    },
-    /**
-	 * 	Finds an user by his id.
-	 * 
-	 * */
-    findById: function(id){
-    	User.findById(id, function(err, user){
-    		if(err || user===null){
-    			return res('heresy');
-    		}else{
-    			return res(user);
-    		}
-    	});
-    },
-    /**
-	 * 	Creates an user
-	 * 
-	 * */
-    create: function(data){
-    	return res(createUser(data));
-    },
-    /**
-     * 	Retrieves the authenticated user's details.
-     * 
-     * */
-    getUserDetails: function(){    	
-    	var authenticated = ensureAuthenticated(req, res, function(){
-    		return res(req.session.userId);
-    	});
-    	
-    	if(!authenticated){
-    		return res("heresy");
-    	}
-    },
-    /**
-	 * 	Removes an user from the db.
-	 * 
-	 * */
-    remove: function(id){
-    	User.remove(id);
-    }
+      /**
+       * 	Finds an author by id.
+       *
+       * */
+      findById : function(id) {
+          Author.findById(id, function(err, author) {
+              if (err != null) {
+                  return res(author);
+              } else {
+                  return res('heresy');
+              }
+          });
+      },
+
+      /**
+       *  Finds an author by its name in the db.
+       *
+       * */
+      findByName: function(name){
+          Author.findByName(name, function(err, author){
+              if(author==null){
+                  return res('heresy');
+              } else {
+                  return res(author);
+              }
+          });
+      },
+
+      /**
+       *	Retrieves all authors from the database.
+       *
+       * */
+      findAll : function() {
+          Author.findAll(function(err, authors) {
+              if (err != null) {
+                  return res(authors);
+              } else {
+                  return res('heresy');
+              }
+          });
+      },
+
+      /**
+       * 	Updates the details of an author.
+       *
+       * */
+      update : function(author) {
+          Author.edit(author.id, author.name, author.books, function(err, author) {
+              if (err != null) {
+                  return res(author);
+              } else {
+                  return res('heresy');
+              }
+          });
+      },
+
+      /**
+       * 	Removes an author from the db.
+       *
+       * */
+      remove : function(id) {
+          Author.remove(id, function() {
+          });
+      }
 
   };
 
 };
-
-/**
- * 	Creates an user.
- * 
- * */
-var createUser = function(data){
-  	console.log("NEW USER!");
-    var user = new User;
-    
-    if(data.name != null){
-    	user.name = data.name;
-    }
-    if(data.username != null){
-    	user.username = data.username;
-    }
-    if(data.password != null){
-    	user.password = data.password;
-    }
-    if (data.contact.email != null) {
-        user.contact.email = data.contact.email;
-    }
-    if (data.contact.phone_number != null) {
-        user.contact.phone_number = data.contact.phone_number;
-    }
-    
-    
-    user.save();
-    
-    return user;
-}

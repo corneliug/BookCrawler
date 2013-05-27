@@ -49,10 +49,26 @@ BookCategory.static('findAll', function(callback) {
 });
 
 /**
+ *  Finds a book category by name.
+ *
+ * */
+BookCategory.static('findByName', function (name, callback) {
+    this.findOne({
+        name: name
+    }).exec(function (err, category) {
+        if(err){
+            return callback(err, null);
+        } else {
+            return callback(null, category);
+        }
+    });
+});
+
+/**
  * 	Updates the details of a BookCategory.
  *
  * */
-BookCategory.static('edit', function(id, name, books) {
+BookCategory.static('update', function(id, name, books) {
 	console.log("UPDATED BookCategory DETAILS!");
 	this.findOne({
 		_id : id

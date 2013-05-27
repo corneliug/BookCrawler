@@ -33,6 +33,26 @@ exports.actions = function(req, res, ss) {
     	});
     },
     /**
+     *  Finds an editure by its name.
+     *
+     * */
+    findByName: function(name){
+        Editure.findByName(name, function(err, editure){
+            if(err || editure==null){
+                return res('heresy');
+            } else {
+                return res(editure);
+            }
+        });
+    },
+    /**
+     *  Updates an editure in the db.
+     *
+     * */
+    update: function(editure){
+        Editure.update(editure.id, editure.name, editure/books);
+    },
+     /**
 	 * 	Removes an editure from the db.
 	 * 
 	 * */

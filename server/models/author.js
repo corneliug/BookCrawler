@@ -34,6 +34,22 @@ Author.static('findById', function(id, callback) {
 });
 
 /**
+ *  Retrieves an user from the db, found by its' name.
+ *
+ * */
+Author.static('findByName', function(name, callback){
+    this.findOne({
+        name: name
+    }).populate('books').exec(function(err, author){
+         if(err || author==null){
+            return callback(err, null);
+        } else {
+            return callback(null, author);
+        }
+    });
+});
+
+/**
  *	Retrieves all authors from the database.
  *
  * */
@@ -52,14 +68,14 @@ Author.static('findAll', function(callback) {
  * 	Updates the details of an author.
  *
  * */
-Author.static('edit', function(id, name, books) {
-	console.log("UPDATED AUTHOR DETAILS!");
+Author.static('edit', function(id, name, books, callback) {
 	this.findOne({
 		_id : id
 	}).exec(function(err, author) {
 		if (err) {
 			return callback(err);
 		} else {
+//            console.log("UPDATING USER");
 			if(name!=null){
 				author.name = name;	
 			}

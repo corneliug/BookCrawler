@@ -33,6 +33,26 @@ exports.actions = function(req, res, ss) {
     	});
     },
     /**
+     *  Finds a book category by name.
+     *
+     * */
+    findByName: function(name){
+        BookCategory.findByName(name, function(err, category){
+            if(err || category===null){
+                return res('heresy');
+            }else{
+                return res(category);
+            }
+        });
+    },
+    /**
+     *  Updates a book category object.
+     *
+     * */
+     update: function(category){
+        BookCategory.update(category.id, category.name, category.books);
+     },
+     /**
 	 * 	Removes a book category from the db.
 	 * 
 	 * */
