@@ -20,7 +20,7 @@ exports.actions = function (req, res, ss) {
                 if (err || user === null) {
                     return res('heresy');
                 } else {
-                    req.session.setUserId(user);
+                    registeredUser = user;
                     return res(user);
                 }
             });
@@ -32,9 +32,29 @@ exports.actions = function (req, res, ss) {
         logout: function () {
             ensureAuthenticated(req, res, function () {
                 console.log("Logging out...");
-                req.session.setUserId(null);
+                registeredUser = null;
                 return;
             });
+        },
+        /**
+         *     The function verifies whether the user is logged in.
+         * We use this function to authorize different actions
+         * and routes throughout the application.
+         *
+         * */
+        ensureAuthenticated: function(){
+            ensureAuthenticated(req, res, function(){
+                return res(true);
+            });
+
+            return res(false);
+        },
+        /**
+         *  Retrieve the current authenticated user.
+         *
+         * */
+        getRegisteredUser: function(){
+            return res(registeredUser);
         },
         /**
          *    Retrieves all the users from the database.
@@ -129,6 +149,9 @@ var createUser = function (data) {
     }
     if (data.contact.phone_number != null) {
         user.contact.phone_number = data.contact.phone_number;
+    }
+    if(data.sex){
+        user.sex = data.sex;
     }
 
 

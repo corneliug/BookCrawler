@@ -136,24 +136,30 @@ module.exports = {
                 // filter the books' offers
                 if (bc_book_offers.length != 0) {
                     if (repoBook.bookOffers != null && repoBook.bookOffers.length != 0) {
-                        var urlRegex1 = null, urlRegex2 = null,
-                            ownerRegex1 = null, ownerRegex2 = null;
+                        var urlRegex1 = null, urlRegex2 = null, url1, url2,
+                            ownerRegex1 = null, ownerRegex2 = null, owner1, owner2;
 
                         for (var j = 0; j < bc_book_offers.length; j++) {
                             if (bc_book_offers[j].url && bc_book_offers[j].owner) {
                                 urlRegex1 = new RegExp(bc_book_offers[j].url);
+                                url1 = bc_book_offers[j].url;
                                 ownerRegex1 = new RegExp(bc_book_offers[j].owner);
+                                owner1 = bc_book_offers[j].owner;
 
                                 for (var k = 0; k < repoBook.bookOffers.length; k++) {
                                     urlRegex2 = null;
+                                    url2 = null;
                                     ownerRegex2 = null;
+                                    owner2 = null;
 
                                     if (repoBook.bookOffers[k].url && repoBook.bookOffers[k].owner) {
                                         urlRegex2 = new RegExp(repoBook.bookOffers[k].url);
+                                        url2 = repoBook.bookOffers[k].url;
                                         ownerRegex2 = new RegExp(repoBook.bookOffers[k].owner);
+                                        owner2 = repoBook.bookOffers[k].owner;
 
-                                        if (!ownerRegex1.match(ownerRegex2) && !ownerRegex2.match(ownerRegex1)
-                                            && !urlRegex1.match(urlRegex2) && !urlRegex2.match(urlRegex1)) {
+                                        if (!owner1.match(ownerRegex2) && !owner2.match(ownerRegex1)
+                                            && !url1.match(urlRegex2) && !url2.match(urlRegex1)) {
                                             bookUpdates = true;
 
                                             repoBook.bookOffers.push(bc_book_offers[j]);
@@ -172,6 +178,11 @@ module.exports = {
                     }
                 }
 
+                if(repoBook.cover == null && book.cover!=null){
+                    repoBook.cover = book.cover;
+                    bookUpdates = true;
+                }
+
                 // update the book details
                 if (bookUpdates) {
                     update(repoBook);
@@ -185,7 +196,7 @@ module.exports = {
 };
 
 var update = function (book) {
-    Book.update(book.id, book.title, book.authors, book.categories, book.pagesNo, function (err, book) {
+    Book.update(book.id, book.title, book.authors, book.categories, book.pagesNo, book.cover, function (err, book) {
         if (err != null) {
             return book;
         } else {

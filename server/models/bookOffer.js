@@ -80,14 +80,9 @@ BookOffer.static('findByBookTitleAndOwner', function (bookTitle, owner, callback
             if (err) {
                 return callback(err, null);
             } else {
-                for (var i = 0; i < offers.length; i++) {
-                    if (offers[i].book != null && offers[i].book.title != null && offers[i].book.title == bookTitle) {
-                        return callback(null, offers[i]);
-                    }
+                if (offers != null) {
+                    return callback(null, offers);
                 }
-
-                // offer not found
-                return callback(null, 404);
             }
         });
 });
@@ -102,14 +97,10 @@ BookOffer.static('update', function (id, book, editure, description, launchYear,
         _id: id
     }).exec(function (err, bookOffer) {
             if (err) {
-                return callback(err);
+                return err;
             } else {
                 if (book != null) {
                     bookOffer.book = book;
-                }
-
-                if (authors != null) {
-                    bookOffer.authors = authors;
                 }
 
                 if (editure != null) {
@@ -154,7 +145,7 @@ BookOffer.static('update', function (id, book, editure, description, launchYear,
 
                 bookOffer.save();
 
-                return callback(null, bookOffer);
+                return bookOffer;
             }
         });
 

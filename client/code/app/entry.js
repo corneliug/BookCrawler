@@ -14,10 +14,10 @@ ss.server.on('ready', function(){
   // Wait for the DOM to finish loading
   jQuery(function(){
     
-    var showLogin, ensureAuthenticated;
+    var showLogin, ensureAuthenticated, showMainPage, showActionBar;
     
     // Load app
-    require('/login');
+    require('/authenticate');
     require('/app');
 
 	initComponents();
@@ -28,9 +28,14 @@ ss.server.on('ready', function(){
 var initComponents = function(){
 	windowWidth = window.innerWidth;
 	windowHeight = window.innerHeight;
-	console.log(windowHeight);
-	showLogin();
-	$("#mainContainer").css("margin-top", windowHeight/4);
-	$("#mainContainer").css("margin", "0px auto");
+
+    ss.rpc("user.ensureAuthenticated", '', function(authenticated){
+        if(authenticated){
+            showMainPage(windowWidth, windowHeight);
+        } else {
+            $("#mainContainer").css("margin-top", windowHeight/4);
+            showLogin();
+        }
+    }) ;
 }
 

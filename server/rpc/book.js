@@ -24,7 +24,7 @@ exports.actions = function (req, res, ss) {
          *
          * */
         findById: function (id) {
-            Book.findById(function (err, book) {
+            Book.findById(id, function (err, book) {
                 if (err || book === null) {
                     return res('heresy');
                 } else {
@@ -39,7 +39,7 @@ exports.actions = function (req, res, ss) {
          * */
         findByTitle: function (title) {
             Book.findByTitle(title, function (err, book) {
-                if (err || books == null) {
+                if (err || book == null) {
                     return res('heresy');
                 } else {
                     return res(book);
@@ -52,7 +52,7 @@ exports.actions = function (req, res, ss) {
          *
          * */
         update: function (book) {
-            Book.update(book.id, book.title, book.authors, book.categories, book.pagesNo);
+            Book.update(book.id, book.title, book.authors, book.categories, book.pagesNo, book.cover);
         },
 
         /**

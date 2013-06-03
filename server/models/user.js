@@ -1,5 +1,6 @@
-var ObjectId, Schema, User, mongoose, bcrypt;
+var ObjectId, Schema, User, Photo, mongoose, bcrypt;
 
+Photo = require('./photo');
 mongoose = require('mongoose');
 bcrypt = require('bcrypt');
 
@@ -20,6 +21,15 @@ User = new Schema({
     hash: {
         type: String,
         required: true
+    },
+    avatar: {
+        type: ObjectId,
+        ref: 'Photo'
+    },
+    sex: {
+        type: String,
+        enum: ['f', 'm'],
+        default: 'm'
     },
     contact: {
         email: {
@@ -44,7 +54,9 @@ User.virtual('password').get(function () {
     });
 
 User.method('checkPassword', function (password, callback) {
-    bcrypt.compare(password, this.hash, callback);
+    var eq = bcrypt.compareSync(password, this.hash);
+
+    return callback(null, eq);
 });
 
 /**

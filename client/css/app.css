@@ -1,0 +1,109 @@
+body {
+    background-color: #808080 !important;
+}
+
+#mainContainer {
+    margin: 0 auto;
+}
+
+#actionBar {
+    position: fixed;
+    background-color: #ff7f50;
+    border-radius: 30px;
+    height: 40px;
+    margin: 0 auto;
+    bottom: 10px;
+    z-index: 100;
+}
+
+#avatar {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 70px;
+    background-color: red;
+    bottom: 70px;
+    left: 26px;
+}
+
+#userName {
+    position: relative;
+    height: 30px;
+    bottom: 90px;
+    left: 132px;
+    text-align: left;
+    color: beige;
+}
+
+#tilesContainer {
+    top: 40px;
+}
+
+.bookTile {
+    background-color: #eee;
+    border-radius: 15px;
+    float: left;
+    min-width: 290px;
+    max-width: 400px;
+    margin: 10px;
+}
+
+.coverPhoto {
+    position: relative;
+    top: 20px;
+    left: 45px;
+}
+
+.breakWord {
+    word-wrap: break-word;
+}
+
+.bookTitle {
+    position: relative;
+    font-weight: bold;
+    font-size: 17px;
+    top: 30px;
+    left: 10px;
+    right: 10px;
+    text-align: left;
+}
+
+.bookAuthor {
+    float: right;
+    color: orange;
+    position: relative;
+    top: 40px;
+    right: 27px;
+    text-align: right;
+    font-size: 11px;
+    max-width: 160px;
+}
+
+.ultimeleOferte {
+    position: relative;
+    top: 60px;
+    text-align: left;
+    left: 20px;
+    font-size: 14px;
+}
+
+.bookOfferOwner {
+    position: relative;
+    top: 65px;
+    text-align: left;
+    left: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline;
+}
+
+.bookOfferPrice {
+    float: right;
+    position: relative;
+    top: 67px;
+    right: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    display: inline;
+    color: red;
+}

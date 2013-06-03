@@ -13,6 +13,7 @@ var lazy = require('lazy'),
     AuthorController = require('../controllers/author'),
     EditureController = require('../controllers/editure'),
     ReviewController = require('../controllers/review'),
+    PhotoController = require('../controllers/photo'),
     BookCategoryController = require('../controllers/bookCategory');
 
 var self;
@@ -97,6 +98,16 @@ exports.extract = function () {
                         bc_authors.push(author);
                         book.authors.push(author);
                     }
+                }
+
+                var coverPhoto = $("td.center_panel table tr td table tr td a img").attr('src');
+                if(coverPhoto){
+                    var data = {};
+                    data.url = coverPhoto;
+
+                    PhotoController.create(data, function(photo){
+                        book.cover = photo;
+                    });
                 }
 
                 var disponibil = $("td.carte table  tr td[align='right'] b").filter(function () {
@@ -296,8 +307,8 @@ var filter = function () {
         for (var j = 0; j < bc_book_offers.length; j++) {
             var bookOffer = bc_book_offers[j];
 
-            if (book != null && book.title != null && book.owner != null) {
-                BookOfferController.filter(book, bookOffer);
+            if (book != null && book.title != null && bookOffer.owner != null) {
+                BookOfferController.filter(book, bookOffer, bc_reviews);
             } else {
                 bookOffer.save();
             }

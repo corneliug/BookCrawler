@@ -1,0 +1,25 @@
+<div class="bookTile">
+    <input type="hidden" value="{{ book._id }}">
+
+    <div class="coverPhoto">
+        <img src="{{ book.cover.url }}">
+    </div>
+    <div class="bookTitle breakWord">
+        {{ book.title }}
+    </div>
+    {{#book.authors}}
+    <div class="bookAuthor">
+        {{ name }}
+    </div>
+    {{/book.authors}}
+
+    <div class="ultimeleOferte">
+        ultimele oferte
+    </div>
+    {{#book.bookOffers}}
+    <div class="bookOfferTile">
+        <div class="bookOfferOwner">{{owner}}</div>
+        <div class="bookOfferPrice">{{price}} lei</div>
+    </div>
+    {{/book.bookOffers}}
+</div>

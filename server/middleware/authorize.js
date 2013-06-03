@@ -5,7 +5,7 @@
  *
  * */
 global.ensureAuthenticated = function (req, res, next) {
-    if (req.session.userId) {
+    if (registeredUser) {
         return next();
     }
 
