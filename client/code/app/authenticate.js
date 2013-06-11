@@ -1,6 +1,6 @@
 showLogin = function(){
 	var login = ss.tmpl['login-form'].render();
-	
+
 	$("#mainContainer").html(login);
 }
 

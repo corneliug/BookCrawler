@@ -20,11 +20,9 @@ BookOffer = new Schema({
         ref: 'Editure'
     },
     description: String,
-    launchYear: Number,
     price: Number,
     currency: String,
     available: Boolean,
-    isbn: String,
     reviewsList: [
         {
             type: ObjectId,
@@ -91,7 +89,7 @@ BookOffer.static('findByBookTitleAndOwner', function (bookTitle, owner, callback
  *     Updates the details of a book offer.
  *
  * */
-BookOffer.static('update', function (id, book, editure, description, launchYear, price, currency, available, isbn, reviewsList, owner, url) {
+BookOffer.static('update', function (id, book, editure, description, price, currency, available, reviewsList, owner, url) {
     console.log("UPDATED BOOK OFFER!");
     this.findOne({
         _id: id
@@ -111,10 +109,6 @@ BookOffer.static('update', function (id, book, editure, description, launchYear,
                     bookOffer.description = description;
                 }
 
-                if (launchYear != null) {
-                    bookOffer.launchYear = launchYear;
-                }
-
                 if (price != null) {
                     bookOffer.price = price;
                 }
@@ -125,10 +119,6 @@ BookOffer.static('update', function (id, book, editure, description, launchYear,
 
                 if (available != null) {
                     bookOffer.available = available;
-                }
-
-                if (isbn != null) {
-                    bookOffer.isbn = isbn;
                 }
 
                 if (reviewsList != null) {

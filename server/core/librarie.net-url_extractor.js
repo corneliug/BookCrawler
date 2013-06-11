@@ -10,7 +10,7 @@ var util = require('util'),
  *     Set up crawling configuration.
  *
  * */
-var urls = ['/catalog-titluri.php?l=X'];
+var urls = ['/catalog-titluri.php?l=X', '/catalog-titluri.php?l=H'];
 var sourcePage = "";
 var crawlDepth = 0;
 var nextPage = "";
@@ -95,20 +95,23 @@ function extractUrls(agent) {
          *
          * */
     } else if (agent.current.uri.match(/[http:\/\/]*www\.librarie\.net\/carti\/(\d+)\/[\d\D\S\s]+/i)) {
-        if (window.document.getElementsByClassName('cautari_asemanatoare').length != 0) {
-            extractReviews = window.document.getElementsByClassName('cautari_asemanatoare')[0].getElementsByTagName('div')[0];
-            var len = extractReviews.childNodes.length;
+//        if (window.document.getElementsByClassName('cautari_asemanatoare').length != 0) {
+//            extractReviews = window.document.getElementsByClassName('cautari_asemanatoare')[0].getElementsByTagName('div')[0];
+//            var len = extractReviews.childNodes.length;
+//
+//            extractReviews = extractReviews.childNodes[len - 1].nodeValue;
+//            if (extractReviews && !extractReviews.match(/\(0\)/)) {
+//                nextPage = $("div.cautari_asemanatoare:first div:last a:last").attr("href");
+//
+//                if (nextPage && nextPage.match(/[http:\/\/]*www\.librarie\.net(\/comentarii\.php\?id=\d+&action=view)/)) {
+//                    nextPage = nextPage.match(/[http:\/\/]*www\.librarie\.net(\/comentarii\.php\?id=\d+&action=view)/)[1];
+//                    console.log("review page == " + nextPage);
+//                    urls.push(nextPage);
+//                }
+//            }
+//        }
 
-            extractReviews = extractReviews.childNodes[len - 1].nodeValue;
-            if (extractReviews && !extractReviews.match(/\(0\)/)) {
-                nextPage = $("div.cautari_asemanatoare:first div:last a:last").attr("href");
-
-                if (nextPage && nextPage.match(/[http:\/\/]*www\.librarie\.net(\/comentarii\.php\?id=\d+&action=view)/)) {
-                    nextPage = nextPage.match(/[http:\/\/]*www\.librarie\.net(\/comentarii\.php\?id=\d+&action=view)/)[1];
-                    console.log("review page == " + nextPage);
-                    urls.push(nextPage);
-                }
-            }
-        }
+        var id = agent.current.uri.match(/[http:\/\/]*www\.librarie\.net\/carti\/(\d+)\/[\d\D\S\s]+/i)[1];
+        urls.push("/comentarii.php?id="+id+"&action=view");
     }
 }

@@ -12,7 +12,7 @@ exports.actions = function (req, res, ss) {
          * */
         findById: function (id) {
             Review.findById(id, function (err, review) {
-                if (err != null) {
+                if (err != 'null') {
                     return res(review);
                 } else {
                     return res('heresy');

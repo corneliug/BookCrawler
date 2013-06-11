@@ -14,28 +14,13 @@ ss.server.on('ready', function(){
   // Wait for the DOM to finish loading
   jQuery(function(){
     
-    var showLogin, ensureAuthenticated, showMainPage, showActionBar;
+    var initComponents, showLogin, ensureAuthenticated, showMainPage, showActionBar, showBookPage;
     
     // Load app
     require('/authenticate');
-    require('/app');
+    var appJs = require('/app');
 
-	initComponents();
+	appJs.initComponents();
   });
 
 });
-
-var initComponents = function(){
-	windowWidth = window.innerWidth;
-	windowHeight = window.innerHeight;
-
-    ss.rpc("user.ensureAuthenticated", '', function(authenticated){
-        if(authenticated){
-            showMainPage(windowWidth, windowHeight);
-        } else {
-            $("#mainContainer").css("margin-top", windowHeight/4);
-            showLogin();
-        }
-    }) ;
-}
-

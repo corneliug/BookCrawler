@@ -5,7 +5,9 @@ var http = require('http');
 global.ss = require('socketstream');
 global.config = require(__dirname + "/server/config.js");
 global.sanitize = require('validator').sanitize;
+
 global.registeredUser = null;
+global.previousPage = null;
 
 require(__dirname + "/server/db.js");
 //include authorization methods
@@ -16,7 +18,7 @@ require(__dirname + "/server/core/ExtractorController.js");
 ss.client.define('main', {
     view: 'app.html',
     css: ['app.css'],
-    code: ['libs/jquery.min.js', 'libs/jquery.masonry.min.js', 'app'],
+    code: ['libs/jquery.min.js', 'libs/jquery.masonry.min.js', 'libs/jquery.tinyscrollbar.min.js', 'app'],
     tmpl: '*'
 });
 

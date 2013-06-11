@@ -51,8 +51,8 @@ exports.actions = function (req, res, ss) {
          *
          * */
         update: function (offer) {
-            BookOffer.update(offer.id, offer.book, offer.editure, offer.description, offer.launchYear, offer.price,
-                offer.currency, offer.available, offer.isbn, offer.reviewsList, offer.owner, offer.url);
+            BookOffer.update(offer.id, offer.book, offer.editure, offer.description, offer.price,
+                offer.currency, offer.available, offer.reviewsList, offer.owner, offer.url);
         },
 
         /**

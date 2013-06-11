@@ -83,16 +83,6 @@ module.exports = {
                                 existentOffer.description = bookOffer.description;
                             }
 
-                            if (existentOffer.launchYear != null && bookOffer.launchYear != null) {
-                                if (existentOffer.launchYear != bookOffer.launchYear) {
-                                    updateOffer = true;
-                                    existentOffer.launchYear = bookOffer.launchYear
-                                }
-                            } else {
-                                updateOffer = true;
-                                existentOffer.launchYear = bookOffer.launchYear;
-                            }
-
                             if (existentOffer.price != null && bookOffer.price != null) {
                                 if (existentOffer.price != bookOffer.price) {
                                     updateOffer = true;
@@ -106,25 +96,6 @@ module.exports = {
                             if (bookOffer.available != null) {
                                 updateOffer = true;
                                 existentOffer.available = bookOffer.available;
-                            }
-
-
-                            if (existentOffer.isbn != null) {
-                                var isbnRegex1 = new RegExp(existentOffer.isbn);
-                                var isbn1 = existentOffer.isbn;
-
-                                if (bookOffer.isbn != null) {
-                                    var isbnRegex2 = new RegExp(bookOffer.isbn);
-                                    var isbn2 = bookOffer.isbn;
-
-                                    if (!isbn1.match(isbnRegex2) && !isbn2.match(isbnRegex1)) {
-                                        updateOffer = true;
-                                        existentOffer.isbn = bookOffer.isbn;
-                                    }
-                                }
-                            } else {
-                                updateOffer = true;
-                                existentOffer.isbn = bookOffer.isbn;
                             }
 
                             if (existentOffer.url != null) {
@@ -183,8 +154,8 @@ var findByBookTitleAndOwner = function (bookTitle, owner, callback) {
  *
  * */
 var update = function (offer) {
-    BookOffer.update(offer.id, offer.book, offer.editure, offer.description, offer.launchYear, offer.price,
-        offer.currency, offer.available, offer.isbn, offer.reviewsList, offer.owner, offer.url);
+    BookOffer.update(offer.id, offer.book, offer.editure, offer.description, offer.price,
+        offer.currency, offer.available, offer.reviewsList, offer.owner, offer.url);
 }
 
 exports.update = update;

@@ -95,6 +95,24 @@ module.exports = {
                     }
                 }
 
+                if (repoBook.isbn != null) {
+                    var isbnRegex1 = new RegExp(repoBook.isbn);
+                    var isbn1 = repoBook.isbn;
+
+                    if (book.isbn != null) {
+                        var isbnRegex2 = new RegExp(book.isbn);
+                        var isbn2 = book.isbn;
+
+                        if (!isbn1.match(isbnRegex2) && !isbn2.match(isbnRegex1)) {
+                            bookUpdates = true;
+                            repoBook.isbn = book.isbn;
+                        }
+                    }
+                } else {
+                    bookUpdates = true;
+                    repoBook.isbn = book.isbn;
+                }
+
                 // filter the books' categories
                 if (bc_categories.length != 0) {
                     if (repoBook.categories != null && repoBook.categories.length != 0) {
@@ -183,11 +201,22 @@ module.exports = {
                     bookUpdates = true;
                 }
 
+                if (book.launchYear != null && repoBook.launchYear != null) {
+                    if (repoBook.launchYear != book.launchYear) {
+                        bookUpdates = true;
+                        repoBook.launchYear = book.launchYear
+                    }
+                } else {
+                    bookUpdates = true;
+                    repoBook.launchYear = book.launchYear;
+                }
+
                 // update the book details
                 if (bookUpdates) {
                     update(repoBook);
                 }
             } else {
+                console.log("save");
                 book.save();
             }
         });
@@ -196,7 +225,7 @@ module.exports = {
 };
 
 var update = function (book) {
-    Book.update(book.id, book.title, book.authors, book.categories, book.pagesNo, book.cover, function (err, book) {
+    Book.update(book.id, book.title, book.authors, book.categories, book.pagesNo, book.launchYear, book.isbn, book.cover, function (err, book) {
         if (err != null) {
             return book;
         } else {

@@ -30,6 +30,8 @@ Book = new Schema({
         }
     ],
     pagesNo: Number,
+    launchYear: Number,
+    isbn: String,
     bookOffers: [
         {
             type: ObjectId,
@@ -92,7 +94,7 @@ Book.static('findAll', function (callback) {
  *     Updates the details of a book.
  *
  * */
-Book.static('update', function (id, title, authors, categories, pagesNo, cover, callback) {
+Book.static('update', function (id, title, authors, categories, pagesNo, launchYear, isbn, cover, callback) {
 //    console.log("UPDATED BOOK!");
     this.findOne({
         _id: id
@@ -114,6 +116,14 @@ Book.static('update', function (id, title, authors, categories, pagesNo, cover, 
 
                 if (pagesNo != null) {
                     book.pagesNo = pagesNo;
+                }
+
+                if (launchYear != null) {
+                    book.launchYear = launchYear;
+                }
+
+                if (isbn != null) {
+                    book.isbn = isbn;
                 }
 
                 if (cover != null) {

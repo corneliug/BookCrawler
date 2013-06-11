@@ -52,7 +52,7 @@ exports.actions = function (req, res, ss) {
          *
          * */
         update: function (book) {
-            Book.update(book.id, book.title, book.authors, book.categories, book.pagesNo, book.cover);
+            Book.update(book.id, book.title, book.authors, book.categories, book.pagesNo, book.launchYear, book.isbn, book.cover);
         },
 
         /**

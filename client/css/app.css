@@ -1,5 +1,5 @@
 body {
-    background-color: #808080 !important;
+    /*background-color: #808080 !important;*/
 }
 
 #mainContainer {
@@ -39,8 +39,15 @@ body {
     top: 40px;
 }
 
+#ocTitlu {
+    margin-left: 300px;
+}
+
 .bookTile {
     background-color: #eee;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #808080;
     border-radius: 15px;
     float: left;
     min-width: 290px;
@@ -66,6 +73,34 @@ body {
     left: 10px;
     right: 10px;
     text-align: left;
+}
+
+.bookTile:hover {
+    cursor: pointer;
+    border-style: solid;
+    border-color: orange;
+    border-radius: 15px;
+}
+
+.bookContainer {
+    /*display: inline-block;*/
+}
+
+#bookTitleC {
+    /*position:absolute;*/
+    margin-left: 50px;
+    /*margin-top: 50px;*/
+    font-size: 30px;
+}
+
+.bookAuthorC {
+    /*position:absolute;*/
+    margin-left: 10px;
+    margin-top: 50px;
+}
+
+.infoRow {
+    padding-left:20px;
 }
 
 .bookAuthor {
@@ -106,4 +141,167 @@ body {
     font-weight: bold;
     display: inline;
     color: red;
+}
+
+.offerPrice {
+    color: red;
+    font-weight: bold;
+    font-size: 25px;
+    float: right;
+    margin-right: 25px;
+    margin-top: 15px;
+}
+
+#backButton {
+    margin-top: 80px;
+    margin-left: 200px;
+    background-image: url("/images/back_b.png");
+    height:56px;
+    width: 54px;
+    background-repeat:no-repeat;
+}
+
+#backButton:hover {
+    cursor: pointer;
+    background-image: url("/images/back_b_hover.png");
+    height:56px;
+    width: 54px;
+    background-repeat:no-repeat;
+}
+
+#bookCover {
+    margin-left: 200px;
+    margin-top: 20px;
+}
+
+#offers {
+    margin-left: 230px;
+    margin-top: 40px;
+    max-width: 700px;
+}
+
+.offerTitle {
+    font-weight: bold;
+    font-size: 17px;
+    margin-left: 30px;
+    margin-top: 10px;
+    font-size: 20px;
+    float: left;
+}
+
+.offerTile:hover {
+    cursor: pointer;
+    background-color: #E8E8E8; color: black;
+}
+
+.evenOfferRow {
+    background-color: #808080; color: black;
+}
+
+.oddOfferRow {
+    background-color: #CC9999; color: black;
+}
+
+#reviewsContainer {
+    /*display: none;*/
+    /*float: right;*/
+    /*margin-right: 130px;*/
+    /*width: 400px;*/
+    /*height:500px;*/
+    /*max-height: 760px;*/
+    /*overflow-y: scroll;*/
+}
+
+#reviewsContainer {
+    display: none;
+    float: right;
+    margin-right: 130px;
+    width: 400px;
+    height:500px;
+    max-height: 760px;
+    clear: both;
+}
+
+#reviewsContainer .viewport {
+    width: 400px;
+    height:500px;
+    max-height: 760px;
+    overflow: hidden;
+    position: relative;
+}
+
+#reviewsContainer .overview {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#reviewsContainer .thumb .end,
+#reviewsContainer .thumb {
+    background-color: #003D5D;
+}
+
+#reviewsContainer .scrollbar {
+    position: relative;
+    float: right;
+    width: 15px;
+}
+
+#reviewsContainer .track {
+    background-color: #D8EEFD;
+    height: 100%;
+    width:13px;
+    position: relative;
+    padding: 0 1px;
+}
+
+#reviewsContainer .thumb {
+    height: 20px;
+    width: 13px;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+}
+
+#reviewsContainer .thumb .end {
+    overflow: hidden;
+    height: 5px;
+    width: 13px;
+}
+
+#reviewsContainer .disable {
+    display: none;
+}
+
+.noSelect {
+    user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+
+.reviewTile {
+    float:left;
+    margin-top: 10px;
+    background-color: #808080;
+    border-style: solid;
+    border-color: orange;
+    border-radius: 10px;
+}
+
+.reviewTile:hover {
+    cursor: pointer;
+    background-color: #E8E8E8;
+}
+
+.reviewContent {
+    margin-top: 10px;
+    float:left;
+}
+
+.reviewAuthor {
+    font-weight: bold;
 }

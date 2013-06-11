@@ -46,7 +46,7 @@ module.exports = {
  * 
  * */
 var addPhoto = function(data, cb) {
-	console.log("ADD PHOTO!");
+//	console.log("ADD PHOTO!");
 	var photo = new Photo, create = 1;
 	if (data.url) {
 		photo.url = sanitize(data.url).xss().toString();
