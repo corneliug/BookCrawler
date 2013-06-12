@@ -6,7 +6,10 @@ exports.initComponents = function(){
         if(authenticated){
             showMainPage(windowWidth, windowHeight);
         } else {
-            $("#mainContainer").css("margin-top", windowHeight/4);
+            $("#mainContainer").css("margin-top", windowHeight/4+20);
+            $("#mainContainer").css("margin-left", windowWidth/3);
+            $("#mainContainer").css("width", 500);
+
             showLogin();
         }
     }) ;
@@ -15,6 +18,7 @@ exports.initComponents = function(){
 showMainPage = function (windowWidth, windowHeight) {
     ss.rpc("user.getRegisteredUser", "", function (user) {
         var main = ss.tmpl['main-mainPage'].render();
+        $("body").css("background-image", "");
 
         $("#mainContainer").html(main);
         showActionBar(windowWidth, user);
@@ -146,23 +150,26 @@ showBookPage = function(bookId){
 showActionBar = function (windowWidth, user) {
     var avatarUrl = "";
 
-    if (user.avatar != null) {
-        avatarUrl = user.avatar;
-    } else if (user.sex == 'm') {
-        avatarUrl = "/images/male_avatar.jpg"
-    } else if (user.sex == 'f') {
-        avatarUrl = "/images/female_avatar.jpg"
+    if(user!=null){
+        $("#userName").html(user.name);
+        if (user.avatar != null) {
+            avatarUrl = user.avatar;
+        } else if (user.sex == 'm') {
+            avatarUrl = "/images/male_avatar.jpg"
+        } else if (user.sex == 'f') {
+            avatarUrl = "/images/female_avatar.jpg"
+        }
+
+        $("#avatar").css({
+            "background-image": "url('" + avatarUrl + "')"
+        });
+
+        $("#actionBar").css({
+            "width": (windowWidth - 800),
+            "left": windowWidth / 2 - (windowWidth - 800) / 2
+        });
+    } else {
+        showLogin();
     }
-
-    $("#actionBar").css({
-        "width": (windowWidth - 800),
-        "left": windowWidth / 2 - (windowWidth - 800) / 2
-    });
-
-    $("#avatar").css({
-        "background-image": "url('" + avatarUrl + "')"
-    });
-
-    $("#userName").html(user.name);
 
 }

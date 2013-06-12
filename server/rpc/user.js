@@ -147,6 +147,9 @@ var createUser = function (data) {
     if (data.contact.email != null) {
         user.contact.email = data.contact.email;
     }
+    if (data.contact.address!= null) {
+        user.contact.address = data.contact.address;
+    }
     if (data.contact.phone_number != null) {
         user.contact.phone_number = data.contact.phone_number;
     }

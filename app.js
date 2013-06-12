@@ -6,7 +6,7 @@ global.ss = require('socketstream');
 global.config = require(__dirname + "/server/config.js");
 global.sanitize = require('validator').sanitize;
 
-global.registeredUser = null;
+global.registeredUser = null;    // the registered user
 global.previousPage = null;
 
 require(__dirname + "/server/db.js");
@@ -17,8 +17,9 @@ require(__dirname + "/server/core/ExtractorController.js");
 // Define a single-page client called 'main'
 ss.client.define('main', {
     view: 'app.html',
-    css: ['app.css'],
-    code: ['libs/jquery.min.js', 'libs/jquery.masonry.min.js', 'libs/jquery.tinyscrollbar.min.js', 'app'],
+    css: ['app.css', 'bootstrap.min.css'],
+    code: ['libs/jquery.min.js', 'libs/jquery.masonry.min.js', 'libs/jquery.tinyscrollbar.min.js', 'libs/bootstrap.min.js',
+        'app'],
     tmpl: '*'
 });
 

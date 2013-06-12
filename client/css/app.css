@@ -35,6 +35,10 @@ body {
     color: beige;
 }
 
+#loginError {
+    display: none;
+}
+
 #tilesContainer {
     top: 40px;
 }
@@ -200,6 +204,10 @@ body {
 
 .oddOfferRow {
     background-color: #CC9999; color: black;
+}
+
+#registerMessage {
+    display: none;
 }
 
 #reviewsContainer {

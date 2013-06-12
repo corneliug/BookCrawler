@@ -14,7 +14,7 @@ ss.server.on('ready', function(){
   // Wait for the DOM to finish loading
   jQuery(function(){
     
-    var initComponents, showLogin, ensureAuthenticated, showMainPage, showActionBar, showBookPage;
+    var initComponents, showLogin, showRegister, ensureAuthenticated, showMainPage, showActionBar, showBookPage;
     
     // Load app
     require('/authenticate');
