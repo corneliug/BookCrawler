@@ -1,6 +1,8 @@
-// My SocketStream 0.3 app
-
 var http = require('http');
+var fs = require("fs");
+var https = require("https");
+var connect = require("connect");
+var connectRoute = require("connect-route");
 
 global.ss = require('socketstream');
 global.config = require(__dirname + "/server/config.js");
@@ -14,14 +16,21 @@ require(__dirname + "/server/db.js");
 require(__dirname + "/server/middleware/authorize.js");
 require(__dirname + "/server/core/ExtractorController.js");
 
+var router = require(__dirname + "/server/router.js");
+
 // Define a single-page client called 'main'
 ss.client.define('main', {
     view: 'app.html',
     css: ['app.css', 'bootstrap.min.css'],
     code: ['libs/jquery.min.js', 'libs/jquery.masonry.min.js', 'libs/jquery.tinyscrollbar.min.js', 'libs/bootstrap.min.js',
-        'app'],
+        'libs/ajaxupload.min.js', 'app'],
     tmpl: '*'
 });
+
+// Router Middleware
+ss.http.middleware.prepend(ss.http.connect.bodyParser());
+ss.http.middleware.prepend(ss.http.connect.query());
+ss.http.middleware.prepend(connectRoute(router));
 
 // Serve this client on the root URL
 ss.http.route('/', function (req, res) {

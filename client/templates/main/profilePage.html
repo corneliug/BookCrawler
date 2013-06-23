@@ -1,0 +1,159 @@
+<div id="profileSettingsContainer">
+    <form id="profileSettingsForm" class="form-horizontal" action="addPhoto" method="POST" enctype="multipart/form-data">
+        <div class="heading text-center">
+            <h4 class="form-heading text-center">Setarile profilului</h4>
+        </div>
+        <br><br><br><br>
+        <table class="profileSettingsTable">
+            <tr class="nameUpdate">
+                <td class="profileLabel">
+                    <div class="displayInline" style="font-weight: bold;">
+                        Numele
+                    </div>
+                </td>
+                <td class="profileItemValue">
+                    <div class="displayInline editDisabled">
+                        {{user.name}}
+                    </div>
+                    <input class="editEnabled" style="display: none;" type="text" placeholder="{{user.name}}">
+                </td>
+                <td class="profileItemEdit">
+                    <div style="display: inline-block">
+                        <span>
+                            Editare
+                        </span>
+                        <i class="icon-pencil"></i>
+                    </div>
+                </td>
+            </tr>
+            <tr class="sexUpdate">
+                <td class="profileLabel">
+                    <div class="displayInline" style="font-weight: bold;">
+                        Sexul
+                    </div>
+                </td>
+                <td class="profileItemValue">
+                    <div class="displayInline editDisabled">
+                        {{user.sex}}
+                    </div>
+                    <div class="controls editEnabled leftImportant" style="display: none;">
+                        <select class="span1">
+                            <option>m</option>
+                            <option>f</option>
+                        </select>
+                    </div>
+                </td>
+                <td class="profileItemEdit">
+                    <div style="display: inline-block">
+                        <span>
+                            Editare
+                        </span>
+                        <i class="icon-pencil"></i>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="profileLabel">
+                    <div class="displayInline" style="font-weight: bold;">
+                        Fotografie de profil
+                    </div>
+                </td>
+                <td class="profileItemValue">
+                    <div class="displayInline editDisabled">
+                        <img src="{{avatarUrl}}">
+                    </div>
+                        <div class="controls editEnabled leftImportant" style="display: none;">
+                            <input type="file" id="imageUpload" name="imageUpload"  size="2" accept="gif|jpg|png">
+                        </div>
+                </td>
+                <td class="profileItemEdit">
+                    <div style="display: inline-block">
+                        <span>
+                            Editare
+                        </span>
+                        <i class="icon-pencil"></i>
+                    </div>
+                </td>
+            </tr>
+            <tr style="height:50px"></tr>
+            <tr class="emailUpdate">
+                <td class="profileLabel">
+                    <div class="displayInline" style="font-weight: bold;">
+                        Email
+                    </div>
+                </td>
+                <td class="profileItemValue">
+                    <div class="displayInline editDisabled">
+                        {{user.contact.email}}
+                    </div>
+                    <input class="editEnabled" style="display: none;" type="text" placeholder="{{user.contact.email}}">
+                </td>
+                <td class="profileItemEdit">
+                    <div style="display: inline-block">
+                        <span>
+                            Editare
+                        </span>
+                        <i class="icon-pencil"></i>
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 45px;" class="passChangeButton">
+                <td class="profileLabel">
+                    <div class="displayInline" style="font-weight: bold;">
+                        <button class="btn btn-small btn-primary" type="button">Schimba parola</button>
+                    </div>
+                </td>
+            </tr>
+            <tr class="passChange">
+                <td class="profileLabel">
+                    <div class="displayInline" style="font-weight: bold;">
+                        Parola curenta
+                    </div>
+                </td>
+                <td class="profileItemValue">
+                    <input type="password">
+                </td>
+            </tr>
+            <tr class="passChange">
+                <td class="profileLabel">
+                    <div class="displayInline" style="font-weight: bold;">
+                        Parola noua
+                    </div>
+                </td>
+                <td class="profileItemValue">
+                    <input type="password">
+                </td>
+            </tr>
+            <tr class="passChange">
+                <td class="profileLabel">
+                    <div class="displayInline" style="font-weight: bold;">
+                        Reintroduceti parola
+                    </div>
+                </td>
+                <td class="profileItemValue">
+                    <input type="password">
+                </td>
+            </tr>
+            <tr class="profileSettingsSubmit">
+                <td class="profileItemValue" colspan="3">
+                    <button class="btn btn-small btn-success" type="submit">Salveaza modificarile</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="profileFeedbackMessages" colspan="3">
+                    <div class="alert" id="profileUpdateFeedback">
+                        <button type="button" class="close">×</button>
+                        <div class="messageContainer">
+                        </div>
+                    </div>
+                    <div class="alert" id="profileUpdateFeedback1">
+                        <button type="button" class="close">×</button>
+                        <div class="messageContainer">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</div>

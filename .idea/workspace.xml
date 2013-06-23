@@ -5,50 +5,70 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4b5fb88-ffab-4605-8253-1e2318fc5dca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/static/images/glyphicons-halflings-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/static/images/glyphicons-halflings.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/code/libs/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/bootstrap/confirmationEmail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/bootstrap/fillAllFields.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/bootstrap/invalidEmail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/bootstrap/invalidPhone.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/authorization/loginForm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/bootstrap/passwordsMismatch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/authorization/registerForm.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/css/jquery.fancybox-1.3.4.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/templates/login/form.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/static/images/logo_medium.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/code/libs/ajaxupload.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/bootstrap/invalidPassword.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/main/pageLayout.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/bootstrap/passwordChanged.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/bootstrap/passwordFieldsNotFilledIn.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/main/profilePage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/bootstrap/profileUpdateError.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/bootstrap/profileUpdated.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/compress-buffer/build/.wafpickle-7" afterPath="$PROJECT_DIR$/node_modules/compress-buffer/build/.wafpickle-7" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bcrypt/build/Release/obj.target/bcrypt_lib/src/bcrypt.o" afterPath="$PROJECT_DIR$/node_modules/bcrypt/build/Release/obj.target/bcrypt_lib/src/bcrypt.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bcrypt/build/Release/bcrypt_lib.node" afterPath="$PROJECT_DIR$/node_modules/bcrypt/build/Release/bcrypt_lib.node" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bcrypt/build/Release/obj.target/bcrypt_lib.node" afterPath="$PROJECT_DIR$/node_modules/bcrypt/build/Release/obj.target/bcrypt_lib.node" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bcrypt/build/Release/obj.target/bcrypt_lib/src/bcrypt_node.o" afterPath="$PROJECT_DIR$/node_modules/bcrypt/build/Release/obj.target/bcrypt_lib/src/bcrypt_node.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bcrypt/build/Release/obj.target/bcrypt_lib/src/blowfish.o" afterPath="$PROJECT_DIR$/node_modules/bcrypt/build/Release/obj.target/bcrypt_lib/src/blowfish.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/static/favicon.ico" afterPath="$PROJECT_DIR$/client/static/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/static/images/logo.png" afterPath="$PROJECT_DIR$/client/static/images/logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/compress-buffer/.lock-wscript" afterPath="$PROJECT_DIR$/node_modules/compress-buffer/.lock-wscript" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bcrypt/build/Makefile" afterPath="$PROJECT_DIR$/node_modules/bcrypt/build/Makefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/css/app.css" afterPath="$PROJECT_DIR$/client/css/app.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/code/app/app.js" afterPath="$PROJECT_DIR$/client/code/app/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/code/app/authenticate.js" afterPath="$PROJECT_DIR$/client/code/app/authenticate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bcrypt/build/Release/.deps/Release/obj.target/bcrypt_lib/src/bcrypt.o.d" afterPath="$PROJECT_DIR$/node_modules/bcrypt/build/Release/.deps/Release/obj.target/bcrypt_lib/src/bcrypt.o.d" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bcrypt/build/Release/.deps/Release/obj.target/bcrypt_lib.node.d" afterPath="$PROJECT_DIR$/node_modules/bcrypt/build/Release/.deps/Release/obj.target/bcrypt_lib.node.d" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bcrypt/build/bcrypt_lib.target.mk" afterPath="$PROJECT_DIR$/node_modules/bcrypt/build/bcrypt_lib.target.mk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bcrypt/build/Release/.deps/Release/obj.target/bcrypt_lib/src/bcrypt_node.o.d" afterPath="$PROJECT_DIR$/node_modules/bcrypt/build/Release/.deps/Release/obj.target/bcrypt_lib/src/bcrypt_node.o.d" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bcrypt/build/Release/.deps/Release/obj.target/bcrypt_lib/src/blowfish.o.d" afterPath="$PROJECT_DIR$/node_modules/bcrypt/build/Release/.deps/Release/obj.target/bcrypt_lib/src/blowfish.o.d" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/main/bookMain.html" afterPath="$PROJECT_DIR$/client/templates/main/bookMain.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bcrypt/build/config.gypi" afterPath="$PROJECT_DIR$/node_modules/bcrypt/build/config.gypi" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/compress-buffer/build/config.log" afterPath="$PROJECT_DIR$/node_modules/compress-buffer/build/config.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/code/app/entry.js" afterPath="$PROJECT_DIR$/client/code/app/entry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/main/mainPage.html" afterPath="$PROJECT_DIR$/client/templates/main/mainPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/controllers/photo.js" afterPath="$PROJECT_DIR$/server/controllers/photo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/controllers/user.js" afterPath="$PROJECT_DIR$/server/controllers/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/user.js" afterPath="$PROJECT_DIR$/server/models/user.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/rpc/user.js" afterPath="$PROJECT_DIR$/server/rpc/user.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BookCrawler.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370935954256" ignored="false" />
+    <file path="/Dummy.txt" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371920527148" ignored="false" />
     <file path="/author.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1368799404168" ignored="false" />
     <file path="/librarie.net-data_extractor.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370609493394" ignored="false" />
     <file path="/book.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370594253616" ignored="false" />
-    <file path="/a.dummy" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370886653258" ignored="false" />
+    <file path="/a.dummy" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371920805994" ignored="false" />
     <file path="/bookOffer.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370434616677" ignored="false" />
     <file path="/editure.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1368801982983" ignored="false" />
     <file path="/bookCategory.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1368793218589" ignored="false" />
     <file path="/ExtractorController.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1369737822487" ignored="false" />
     <file path="/librarie.net-url_extractor.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370528036799" ignored="false" />
-    <file path="/user.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371022553816" ignored="false" />
+    <file path="/user.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371994590787" ignored="false" />
     <file path="$PROJECT_DIR$/../../Qualitance/QCV/pom.xml" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1369661315339" ignored="false" />
-    <file path="/authenticate.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371023600940" ignored="false" />
-    <file path="/entry.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370945803880" ignored="false" />
-    <file path="/app.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370944388162" ignored="false" />
+    <file path="/authenticate.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371702565406" ignored="false" />
+    <file path="/entry.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371652725280" ignored="false" />
+    <file path="/app.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371995508970" ignored="false" />
     <file path="/authorize.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1369747265225" ignored="false" />
-    <file path="/mainPage.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370942384434" ignored="false" />
-    <file path="/app.css" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370975490279" ignored="false" />
+    <file path="/mainPage.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371651867423" ignored="false" />
+    <file path="/app.css" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371995676296" ignored="false" />
     <file path="/bookTile.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370284121771" ignored="false" />
-    <file path="/photo.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1369831432810" ignored="false" />
-    <file path="/bookMain.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370942325630" ignored="false" />
+    <file path="/photo.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371923733617" ignored="false" />
+    <file path="/bookMain.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371222315331" ignored="false" />
     <file path="/reviewTile.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370608607443" ignored="false" />
     <file path="/review.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370601797297" ignored="false" />
     <file path="/bootstrap.min.css" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370941977374" ignored="false" />
@@ -60,6 +80,15 @@
     <file path="/passwordsMismatch.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371022439085" ignored="false" />
     <file path="/confirmationEmail.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371023576888" ignored="false" />
     <file path="/loginForm.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371023729849" ignored="false" />
+    <file path="/profilePage.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371995406332" ignored="false" />
+    <file path="$PROJECT_DIR$/../../DoLiveLove/do.live.love-platform/src/public/js/dll.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371818808783" ignored="false" />
+    <file path="/package.json" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371892004004" ignored="false" />
+    <file path="/router.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371993502818" ignored="false" />
+    <file path="/invalidPassword.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371978384320" ignored="false" />
+    <file path="/passwordFieldsNotFilledIn.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371978495375" ignored="false" />
+    <file path="/profileUpdated.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371978547972" ignored="false" />
+    <file path="/passwordChanged.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371978915011" ignored="false" />
+    <file path="/profileUpdateError.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371979008757" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +103,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -109,6 +137,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -118,10 +147,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/code/app/app.js">
+      <file leaf-file-name="profilePage.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/templates/main/profilePage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0">
+            <state line="142" column="42" selection-start="5944" selection-end="5944" vertical-scroll-proportion="-18.166666">
               <folding />
             </state>
           </provider>
@@ -130,16 +159,34 @@
       <file leaf-file-name="authenticate.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/code/app/authenticate.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="108" selection-start="3311" selection-end="3311" vertical-scroll-proportion="0.0">
+            <state line="94" column="24" selection-start="3151" selection-end="3217" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/rpc/user.js">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/code/app/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="20" selection-start="3906" selection-end="3906" vertical-scroll-proportion="0.0">
+            <state line="85" column="87" selection-start="3063" selection-end="3063" vertical-scroll-proportion="-7.392857">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bookMain.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/templates/main/bookMain.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="32" selection-start="472" selection-end="472" vertical-scroll-proportion="-8.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/css/app.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="124" column="68" selection-start="1823" selection-end="1823" vertical-scroll-proportion="0.18627451">
               <folding />
             </state>
           </provider>
@@ -148,47 +195,43 @@
       <file leaf-file-name="registerForm.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/templates/authorization/registerForm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="53" selection-start="1188" selection-end="1188" vertical-scroll-proportion="-5.9166665">
-              <folding>
-                <element signature="n#style#0;n#h4#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#2;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#3;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#4;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#5;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#6;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#7;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#8;n#form#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loginForm.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/templates/authorization/loginForm.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="106" selection-start="527" selection-end="527" vertical-scroll-proportion="0.18814139">
-              <folding>
-                <element signature="n#style#0;n#h4#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#form#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="13" selection-start="581" selection-end="581" vertical-scroll-proportion="0.0">
+            <state line="62" column="46" selection-start="2868" selection-end="2883" vertical-scroll-proportion="-19.166666">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/css/app.css">
+      <file leaf-file-name="router.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="209" column="17" selection-start="3226" selection-end="3226" vertical-scroll-proportion="-17.357143">
+            <state line="16" column="107" selection-start="791" selection-end="791" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="passwordChanged.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/templates/bootstrap/passwordChanged.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="56" selection-start="81" selection-end="81" vertical-scroll-proportion="-0.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/controllers/user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="76" column="103" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/rpc/user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="144" column="20" selection-start="4083" selection-end="4083" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -212,22 +255,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/client/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/client/templates/main/bookMain.html" />
-        <option value="$PROJECT_DIR$/client/templates/main/mainPage.html" />
-        <option value="$PROJECT_DIR$/client/templates/login/form.html" />
-        <option value="$PROJECT_DIR$/client/code/app/app.js" />
-        <option value="$PROJECT_DIR$/client/code/app/entry.js" />
-        <option value="$PROJECT_DIR$/client/css/app.css" />
-        <option value="$PROJECT_DIR$/client/templates/bootstrap/fillAllFields.html" />
-        <option value="$PROJECT_DIR$/client/templates/bootstrap/invalidEmail.html" />
-        <option value="$PROJECT_DIR$/client/templates/bootstrap/invalidPhone.html" />
-        <option value="$PROJECT_DIR$/client/templates/bootstrap/passwordsMismatch.html" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/server/controllers/photo.js" />
+        <option value="$PROJECT_DIR$/server/controllers/user.js" />
         <option value="$PROJECT_DIR$/server/rpc/user.js" />
-        <option value="$PROJECT_DIR$/client/templates/authorization/registerForm.html" />
-        <option value="$PROJECT_DIR$/client/templates/bootstrap/confirmationEmail.html" />
-        <option value="$PROJECT_DIR$/client/code/app/authenticate.js" />
-        <option value="$PROJECT_DIR$/client/templates/authorization/loginForm.html" />
+        <option value="$PROJECT_DIR$/client/templates/bootstrap/invalidPassword.html" />
+        <option value="$PROJECT_DIR$/client/templates/bootstrap/passwordFieldsNotFilledIn.html" />
+        <option value="$PROJECT_DIR$/client/templates/bootstrap/profileUpdated.html" />
+        <option value="$PROJECT_DIR$/client/templates/bootstrap/passwordChanged.html" />
+        <option value="$PROJECT_DIR$/client/templates/bootstrap/profileUpdateError.html" />
+        <option value="$PROJECT_DIR$/server/router.js" />
+        <option value="$PROJECT_DIR$/server/models/user.js" />
+        <option value="$PROJECT_DIR$/client/templates/main/profilePage.html" />
+        <option value="$PROJECT_DIR$/client/code/app/app.js" />
+        <option value="$PROJECT_DIR$/client/templates/main/bookMain.html" />
+        <option value="$PROJECT_DIR$/client/css/app.css" />
       </list>
     </option>
   </component>
@@ -265,8 +308,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -313,47 +354,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="uploads" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="rpc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookCrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookCrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="url_extractor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookCrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookCrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -385,65 +404,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="middleware" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookCrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookCrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookCrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookCrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookCrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookCrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -545,28 +506,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookCrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookCrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -586,10 +525,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -617,6 +552,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -624,19 +561,23 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../FreeTheWorld/freetheworld" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/templates/bootstrap" />
+      <recent name="$PROJECT_DIR$/server" />
       <recent name="$PROJECT_DIR$/client/static/images" />
       <recent name="$PROJECT_DIR$/client/code/libs" />
       <recent name="$PROJECT_DIR$/client/css" />
-      <recent name="$PROJECT_DIR$/client/code" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/code/libs" />
+      <recent name="$PROJECT_DIR$/client/static/images" />
       <recent name="$PROJECT_DIR$/server/controllers" />
       <recent name="$PROJECT_DIR$/server/controllers/models" />
     </key>
@@ -782,7 +723,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1772288" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867885" sideWeight="0.9944598" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2803437" sideWeight="0.9944598" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -796,7 +737,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21218836" sideWeight="0.67132115" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21218836" sideWeight="0.7196563" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -858,7 +799,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -866,128 +807,115 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/templates/main/mainPage.html">
+    <entry file="file://$PROJECT_DIR$/server/models/photo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="41" selection-start="119" selection-end="119" vertical-scroll-proportion="0.102622576">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="581" selection-end="581" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/code/app/entry.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="43" selection-start="379" selection-end="379" vertical-scroll-proportion="0.2663707">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="17" selection-start="3226" selection-end="3226" vertical-scroll-proportion="-17.357143">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/bootstrap/fillAllFields.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="55" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/bootstrap/invalidEmail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="63" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/bootstrap/invalidPhone.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="47" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/bootstrap/passwordsMismatch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="119" selection-start="56" selection-end="56" vertical-scroll-proportion="0.017103763">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/code/app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/rpc/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="20" selection-start="3906" selection-end="3906" vertical-scroll-proportion="0.0">
+        <state line="18" column="0" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/templates/bootstrap/confirmationEmail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="41" selection-start="110" selection-end="110" vertical-scroll-proportion="0.017103763">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/bootstrap/profileUpdateError.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="69" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="24" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/code/app/authenticate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="24" selection-start="3151" selection-end="3217" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="107" selection-start="791" selection-end="791" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/bootstrap/passwordChanged.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="56" selection-start="81" selection-end="81" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="103" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="196" column="42" selection-start="4458" selection-end="4458" vertical-scroll-proportion="0.671875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/rpc/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="144" column="20" selection-start="4083" selection-end="4083" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/photo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="63" selection-start="1140" selection-end="1140" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/templates/authorization/registerForm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="53" selection-start="1188" selection-end="1188" vertical-scroll-proportion="-5.9166665">
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#2;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#3;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#4;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#5;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#6;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#7;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#8;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/code/app/authenticate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="108" selection-start="3311" selection-end="3311" vertical-scroll-proportion="0.0">
+        <state line="62" column="46" selection-start="2868" selection-end="2883" vertical-scroll-proportion="-19.166666">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/authorization/loginForm.html">
+    <entry file="file://$PROJECT_DIR$/client/templates/main/profilePage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="106" selection-start="527" selection-end="527" vertical-scroll-proportion="0.18814139">
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="142" column="42" selection-start="5944" selection-end="5944" vertical-scroll-proportion="-18.166666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/main/bookMain.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="32" selection-start="472" selection-end="472" vertical-scroll-proportion="-8.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/code/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="87" selection-start="3063" selection-end="3063" vertical-scroll-proportion="-7.392857">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="68" selection-start="1823" selection-end="1823" vertical-scroll-proportion="0.18627451">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -57,6 +57,18 @@ exports.actions = function (req, res, ss) {
             return res(registeredUser);
         },
         /**
+         *  Retrieve the current authenticated user.
+         *
+         * */
+        updateRegisteredUser: function(){
+            User.findById(registeredUser._id, function (err, user) {
+                if (err || user === null) {
+                    registeredUser = user;
+                    return res(user);
+                }
+            });
+        },
+        /**
          *    Retrieves all the users from the database.
          *
          * */
@@ -121,6 +133,39 @@ exports.actions = function (req, res, ss) {
          * */
         remove: function (id) {
             User.remove(id);
+        },
+
+        /**
+         *     Updates an user's profile info.
+         *
+         * */
+        updateProfileInfo: function(id, info){
+            User.updateProfileInfo(id, info, function(err, newUser){
+                if(err){
+
+                    console.log(err);
+                    return res('heresy');
+                } else {
+                    registeredUser = newUser;
+                    return res(newUser);
+                }
+            });
+        },
+
+        /**
+         *   Changes an user's password.
+         *
+         * */
+        changePassword: function(id, password, newPassword){
+            User.changePassword(id, password, newPassword, function(err, feedback){
+                if(err!=null || err==true){
+                    return res('heresy');
+                } else if(feedback){
+                    return res('success');
+                }
+
+                return res('heresy');
+            });
         }
 
     };

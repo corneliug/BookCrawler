@@ -66,7 +66,7 @@ User.method('checkPassword', function (password, callback) {
 User.static('authenticate', function (username, password, callback) {
     this.findOne({
         username: username
-    }).populate('contact').exec(function (err, user) {
+    }).populate('contact').populate('avatar').exec(function (err, user) {
             if (err)
                 return callback(err);
 
@@ -114,6 +114,7 @@ User.static('findById', function (id, callback) {
         _id: id
     })
         .populate('contact')
+        .populate('avatar')
         .exec(function (err, user) {
             if (err) {
                 return callback(err, null);
@@ -151,6 +152,90 @@ User.static('remove', function (id) {
             return;
         }
     });
+});
+
+/**
+ *     Updates the profile photo of an user.
+ *
+ * */
+User.static('updateProfilePhoto', function (id, photo, callback) {
+    this.findOne({
+        _id: id
+    }).exec(function (err, user) {
+            if (err) {
+                return callback(err);
+            } else {
+                if (photo!= null) {
+                    user.avatar = photo;
+                }
+
+                user.save();
+                return;
+            }
+        });
+
+});
+
+/**
+ *     Updates an user's profile info.
+ *
+ * */
+User.static('updateProfileInfo', function (id, info, callback) {
+    this.findOne({
+        _id: id
+    }).exec(function (err, user) {
+            if (err) {
+                return callback(err);
+            } else {
+                if(info.name!=null && info.name!=""){
+                    user.name = info.name;
+                }
+
+                if(info.sex!=null && info.sex!=""){
+                    user.sex = info.sex;
+                }
+
+                if(info.email!=null & info.email!=""){
+                    user.contact.email = info.email;
+                }
+
+                user.save();
+
+                return callback(null, user);
+            }
+        });
+});
+
+/**
+ *   Changes an user's password.
+ *
+ * */
+User.static('changePassword', function (id, password, newPassword, callback) {
+    this.findOne({
+        _id: id
+    }).exec(function (err, user) {
+            if (err)
+                return callback(err);
+
+            if (!user)
+                return callback(true, false);
+
+            user.checkPassword(password, function (err, passwordCorrect) {
+                if (err) {
+                    return callback(err);
+                } else if (!passwordCorrect) {
+                    console.log("INCORRECT PASSWORD!");
+                    return callback(true, false);
+                }
+
+                user.password = newPassword;
+                user.save();
+
+                console.log("USER PASSWORD HAS CHANGED!");
+                return callback(null, true);
+            });
+
+        });
 });
 
 module.exports = mongoose.model('User', User); 

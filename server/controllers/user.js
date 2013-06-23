@@ -33,13 +33,7 @@ module.exports = {
      *
      * */
     findById: function (id) {
-        User.findById(id, function (err, user) {
-            if (err || user === null) {
-                return 'heresy';
-            } else {
-                return user;
-            }
-        });
+        return findUserById(id);
     },
     /**
      *     Creates an user
@@ -54,6 +48,44 @@ module.exports = {
      * */
     remove: function (id) {
         User.remove(id);
+    },
+
+    /**
+     *  Updates the profile photo of an user.
+     *
+     * */
+    updateProfilePhoto: function(user, photo){
+        User.updateProfilePhoto(user._id, photo);
+    },
+
+    /**
+     *     Updates an user's profile info.
+     *
+     * */
+    updateProfileInfo: function(id, info){
+        User.updateProfileInfo(id, info, function(err, newUser){
+            if(err){
+                return 'heresy';
+            } else {
+                return newUser;
+            }
+        });
+    },
+
+    /**
+     *   Changes an user's password.
+     *
+     * */
+    changePassword: function(id, password, newPassword){
+        User.changePassword(id, password, newPassword, function(err, feedback){
+            if(err!=null || err==true){
+                return 'heresy';
+            } else if(feedback){
+                return 'success';
+            }
+
+            return 'heresy';
+        });
     }
 
 };
@@ -86,4 +118,14 @@ var createUser = function (data) {
     user.save();
 
     return user;
+}
+
+var findUserById = function(id){
+    return User.findById(id, function (err, user) {
+        if (err || user === null) {
+            return 'heresy';
+        } else {
+            return user;
+        }
+    });
 }

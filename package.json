@@ -2,13 +2,16 @@
   "name": "bookcrawler",
   "description": "An awesome real time application",
   "version": "0.0.1",
-  "author": "Me <me@mydomain.com>",
+  "author": "Corneliu Gosa <corneliu.gosa@gmail.com.com>",
   "private": true,
   "engines": { "node": ">= 0.6.0" },
   "dependencies": {
     "socketstream": "0.3.x",
     "ss-stylus": "0.1.x",
     "ss-hogan": "0.1.x",
-    "socketstream-resource": "x"
+    "socketstream-resource": "x",
+    "jquery-file-upload-middleware": "x",
+    "connect": "x",
+    "connect-route": "x"
   }
 }

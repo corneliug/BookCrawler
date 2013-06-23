@@ -15,6 +15,8 @@ showLogin = function(){
         if(username!=null && password!=null){
             ss.rpc('user.authenticate', data, function(response){
                 if(response!=null && response!='heresy'){
+                    var main = ss.tmpl['main-pageLayout'].render();
+                    $("#mainContainer").html(main);
                     showMainPage(windowWidth, windowHeight);
                 } else {
                     $("#loginError").show();

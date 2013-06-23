@@ -61,6 +61,7 @@ var addPhoto = function(data, cb) {
 //	}
 
 	if (create == 1) {
+        console.log("save photo");
 		photo.save();
 
         return cb(photo);

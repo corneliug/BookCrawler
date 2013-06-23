@@ -1,9 +1,14 @@
+var contextMenuOpened = false;
+
 exports.initComponents = function(){
     windowWidth = window.innerWidth;
     windowHeight = window.innerHeight;
 
     ss.rpc("user.ensureAuthenticated", '', function(authenticated){
         if(authenticated){
+            var main = ss.tmpl['main-pageLayout'].render();
+            $("#mainContainer").html(main);
+
             showMainPage(windowWidth, windowHeight);
         } else {
             $("#mainContainer").css("margin-top", windowHeight/4+20);
@@ -17,10 +22,11 @@ exports.initComponents = function(){
 
 showMainPage = function (windowWidth, windowHeight) {
     ss.rpc("user.getRegisteredUser", "", function (user) {
+        closeOptions();
         var main = ss.tmpl['main-mainPage'].render();
         $("body").css("background-image", "");
 
-        $("#mainContainer").html(main);
+        $("#content").html(main);
         showActionBar(windowWidth, user);
 
         $("#tilesContainer").css({
@@ -86,9 +92,9 @@ showBookPage = function(bookId){
     ss.rpc("user.getRegisteredUser", "", function (user) {
         ss.rpc("book.findById", bookId, function(book){
             if(book!=null && book!='heresy'){
+                closeOptions();
                 var bookTile = ss.tmpl['main-bookMain'].render({book: book});
-                $("#mainContainer").html(bookTile);
-                showActionBar(windowWidth, user);
+                $("#content").html(bookTile);
 
                 $("#offers .offerTile").each(function(index){
                     if(index%2==0){
@@ -147,13 +153,146 @@ showBookPage = function(bookId){
     });
 }
 
+showProfilePage = function(user){
+    previousPage = 'main';
+
+    ss.rpc("user.getRegisteredUser", "", function (user) {
+        var avatarUrl = "";
+
+        if (user.avatar != null) {
+            avatarUrl = user.avatar;
+        } else if (user.sex == 'm') {
+            avatarUrl = "/images/male_avatar.jpg"
+        } else if (user.sex == 'f') {
+            avatarUrl = "/images/female_avatar.jpg"
+        }
+
+        var profilePage = ss.tmpl['main-profilePage'].render({user: user, avatarUrl: avatarUrl});
+        $("body").css("background-image", "");
+
+        closeOptions();
+        $("#content").html(profilePage);
+
+        $(".profileItemEdit").click(function(){
+            $(this).hide();
+            $(this).parent("tr").find(".editDisabled").hide();
+            $(this).parent("tr").find(".editEnabled").show();
+        });
+
+        $(".passChangeButton").click(function(){
+            $(this).hide();
+            $(".passChange").show();
+        });
+
+        $("#profileSettingsForm").submit(function(e){
+            var continueFlow = true;
+            var newName = $(".nameUpdate input").val();
+            var newSex = $(".sexUpdate select").val();
+            var newEmail = $(".emailUpdate input").val();
+
+            var currentPass = $(".passChange:eq(0) input").val();
+            var newPass = $(".passChange:eq(1) input").val();
+            var newPass2 = $(".passChange:eq(2) input").val();
+
+            var newPhoto = $("#imageUpload")[0].files[0];
+            if(!newPhoto) {
+                e.preventDefault();
+            }
+
+            if(currentPass!=""){
+                if(newPass!="" && newPass2!=""){
+                    if(newPass===newPass2){
+                        ss.rpc("user.changePassword", user._id, currentPass, newPass, function(feedback){
+                            if(feedback!=null && feedback!='heresy'){
+                                $("#profileUpdateFeedback").removeClass();
+                                $("#profileUpdateFeedback").addClass("alert");
+
+                                var messageTmpl = ss.tmpl['bootstrap-passwordChanged'].render();
+                                $("#profileUpdateFeedback .messageContainer").html(messageTmpl);
+                                $("#profileUpdateFeedback").addClass("alert alert-info");
+                                $("#profileUpdateFeedback").show()
+
+                            } else {
+                                $("#profileUpdateFeedback").removeClass();
+                                $("#profileUpdateFeedback").addClass("alert");
+
+                                var messageTmpl = ss.tmpl['bootstrap-invalidPassword'].render();
+                                $("#profileUpdateFeedback .messageContainer").html(messageTmpl);
+                                $("#profileUpdateFeedback").addClass("alert alert-error");
+                                $("#profileUpdateFeedback").show();
+
+                                continueFlow = false;
+                            }
+                        });
+                    } else {
+                        $("#profileUpdateFeedback").removeClass();
+                        $("#profileUpdateFeedback").addClass("alert");
+
+                        var messageTmpl = ss.tmpl['bootstrap-passwordsMismatch'].render();
+                        $("#profileUpdateFeedback .messageContainer").html(messageTmpl);
+                        $("#profileUpdateFeedback").addClass("alert alert-error");
+                        $("#profileUpdateFeedback").show()
+
+                        continueFlow = false;
+                    }
+                } else {
+                    $("#profileUpdateFeedback").removeClass();
+                    $("#profileUpdateFeedback").addClass("alert");
+
+                    var messageTmpl = ss.tmpl['bootstrap-passwordFieldsNotFilledIn'].render();
+                    $("#profileUpdateFeedback .messageContainer").html(messageTmpl);
+                    $("#profileUpdateFeedback").addClass("alert alert-error");
+                    $("#profileUpdateFeedback").show()
+
+                    continueFlow = false;
+                }
+            }
+
+            setTimeout(function(){
+                if((newEmail!="" || newSex!="" || newEmail!="") && continueFlow==true){
+                    var info = {};
+                    info.name = newName;
+                    info.sex = newSex;
+                    info.email = newEmail;
+
+                    ss.rpc("user.updateProfileInfo", user._id, info, function(feedback){
+                        if(feedback!='heresy'){
+                            $("#profileUpdateFeedback1").removeClass();
+                            $("#profileUpdateFeedback1").addClass("alert");
+
+                            var messageTmpl = ss.tmpl['bootstrap-profileUpdated'].render();
+                            $("#profileUpdateFeedback1 .messageContainer").html(messageTmpl);
+                            $("#profileUpdateFeedback1").addClass("alert alert-info");
+                            $("#profileUpdateFeedback1").show()
+
+                            setTimeout(function(){
+                                window.location = "/";
+                            }, 3000);
+                        } else {
+                            $("#profileUpdateFeedback1").removeClass();
+                            $("#profileUpdateFeedback1").addClass("alert");
+
+                            var messageTmpl = ss.tmpl['bootstrap-profileUpdateError'].render();
+                            $("#profileUpdateFeedback1 .messageContainer").html(messageTmpl);
+                            $("#profileUpdateFeedback1").addClass("alert alert-error");
+                            $("#profileUpdateFeedback1").show()
+                        }
+                    });
+                }
+            }, 200);
+
+        });
+
+    });
+}
+
 showActionBar = function (windowWidth, user) {
     var avatarUrl = "";
 
     if(user!=null){
         $("#userName").html(user.name);
         if (user.avatar != null) {
-            avatarUrl = user.avatar;
+            avatarUrl = user.avatar.url;
         } else if (user.sex == 'm') {
             avatarUrl = "/images/male_avatar.jpg"
         } else if (user.sex == 'f') {
@@ -165,11 +304,57 @@ showActionBar = function (windowWidth, user) {
         });
 
         $("#actionBar").css({
-            "width": (windowWidth - 800),
-            "left": windowWidth / 2 - (windowWidth - 800) / 2
+            "width": windowWidth
         });
+
+        $("#avatarHover").hover(
+            function(){
+                $("#avatarHover").css("opacity", "0.7");
+            },
+            function(){
+                $("#avatarHover").css("opacity", "0");
+            }
+        ).click(function(){
+            toggleContextualMenu();
+        });
+
+        $("#topLogo").click(function(){
+            window.location = "/";
+        });
+
+        $("#userName").click(function(){
+            toggleContextualMenu();
+        });
+
+        $(".contextOption:eq(0)").click(function(){
+            showProfilePage(user);
+        });
+
+        $(".contextOption:eq(1)").click(function(){
+            ss.rpc("user.logout", "", function(){
+            });
+
+            showLogin();
+        });
+
     } else {
         showLogin();
     }
 
+}
+
+closeOptions = function(){
+    if(contextMenuOpened){
+        $("#contextualMenu").hide();
+        contextMenuOpened = false;
+    }
+}
+
+toggleContextualMenu = function(){
+    if(contextMenuOpened){
+        closeOptions();
+    } else {
+        $("#contextualMenu").show();
+        contextMenuOpened = true;
+    }
 }

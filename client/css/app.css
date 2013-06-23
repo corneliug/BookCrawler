@@ -1,5 +1,5 @@
 body {
-    /*background-color: #808080 !important;*/
+    background-color: #f2f2f2;
 }
 
 #mainContainer {
@@ -8,31 +8,73 @@ body {
 
 #actionBar {
     position: fixed;
-    background-color: #ff7f50;
-    border-radius: 30px;
-    height: 40px;
+    background-color: #757172;
+    height: 60px;
     margin: 0 auto;
-    bottom: 10px;
+    top: 0px;
     z-index: 100;
+}
+
+#topLogo {
+    background-image: url("/images/logo_medium.png");
+    position: relative;
+    width: 290px;
+    height: 50px;
+    top: 5px;
+    float: left;
+    left: 26px;
+}
+
+#topLogo:hover {
+    cursor: pointer;
 }
 
 #avatar {
     position: relative;
-    width: 100px;
-    height: 100px;
-    border-radius: 70px;
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
     background-color: red;
-    bottom: 70px;
-    left: 26px;
+    top: 5px;
+    right: 370px;
+    float: right;
+}
+
+#avatarHover {
+    cursor: pointer;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    background-size: 50px 50px;
+    top: 5px;
+    right: 320px;
+    float: right;
+    z-index: 400;
+    opacity: 0;
 }
 
 #userName {
     position: relative;
     height: 30px;
-    bottom: 90px;
-    left: 132px;
-    text-align: left;
-    color: beige;
+    bottom: -20px;
+    right: 210px;
+    float: right;
+    color: black;
+    font-size: 16px;
+    color: #d3d3d3;
+}
+
+#userName:hover {
+    cursor: pointer;
+}
+
+#searchBar {
+    position: relative;
+    float: right;
+    right: -140px;
+    height: 30px;
+    top: 10px;
 }
 
 #loginError {
@@ -40,7 +82,7 @@ body {
 }
 
 #tilesContainer {
-    top: 40px;
+    top: 80px;
 }
 
 #ocTitlu {
@@ -87,7 +129,7 @@ body {
 }
 
 .bookContainer {
-    /*display: inline-block;*/
+    margin-top: 140px;
 }
 
 #bookTitleC {
@@ -312,4 +354,95 @@ body {
 
 .reviewAuthor {
     font-weight: bold;
+}
+
+#contextualMenu {
+    display: none;
+    float: right;
+    position: fixed;
+    top: 62px;
+    right: 280px;
+    width: 130px;
+    height: 47px;
+    background-color: #757172;
+}
+
+#contextualMenu .contextOption {
+    color: #d3d3d3;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+#contextualMenu .contextOption:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contextualMenuSeparator {
+    width: 90px;
+    height: 2px;
+    background-color: #d3d3d3;
+    margin-left: 10px;
+}
+
+#profileSettingsContainer {
+    margin-top: 200px;
+}
+
+.displayInline {
+    display: inline-block;
+}
+
+.profileSettingsTable {
+    margin: 0px auto;
+}
+
+.profileSettingsTable .profileLabel {
+    width: 180px;
+}
+
+.profileSettingsTable .profileItemValue {
+    width: 220px;
+}
+
+.profileSettingsTable .profileItemEdit {
+    width: 70px;
+}
+
+.profileSettingsTable .profileItemEdit:hover {
+    cursor: pointer;
+}
+
+.profileSettingsTable .profileItemEdit span:hover {
+    text-decoration: underline;
+}
+
+.profileItemValue .controls {
+    float: left;
+    margin-left: -180px;
+}
+
+.profileItemEdit {
+    vertical-align: bottom;
+}
+
+.passChange {
+    display: none;
+}
+
+.profileSettingsSubmit {
+    height: 120px;
+}
+
+.profileSettingsSubmit button {
+    float: right;
+    margin-right: 30px;
+}
+
+.leftImportant {
+    margin-left: 0px !important;
+}
+#profileUpdateFeedback, #profileUpdateFeedback1 {
+    display: none;
+    width: 700px;
 }
