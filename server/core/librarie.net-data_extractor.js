@@ -20,6 +20,7 @@ var self;
 var sourcePage = "";
 var crawlDepth = "";
 var uri = "";
+var coverPhoto = "";
 var bc_books = [], bc_authors = [], bc_categories = [], bc_editures = [], bc_reviews = [], bc_book_offers = [],
     rep_books = [], rep_authors = [], rep_categories = [], rep_editures = [], rep_reviews = [], rep_book_offers = [];
 
@@ -105,15 +106,7 @@ exports.extract = function () {
                     }
                 }
 
-                var coverPhoto = $("td.center_panel table tr td table tr td a img").attr('src');
-                if(coverPhoto){
-                    var data = {};
-                    data.url = coverPhoto;
-
-                    PhotoController.create(data, function(photo){
-                        book.cover = photo;
-                    });
-                }
+                coverPhoto = $("td.center_panel table tr td table tr td a img").attr('src');
 
                 var disponibil = $("td.carte table  tr td[align='right'] b").filter(function () {
                     if ($(this).text() != null && $(this).text().match(/Disponibilitate/)) {
@@ -313,6 +306,15 @@ var filter = function () {
         if (book != null && book.title) {
             BookController.filter(book, bc_authors, bc_categories, bc_book_offers);
         } else {
+            if(coverPhoto){
+                var data = {};
+                data.url = coverPhoto;
+
+                PhotoController.create(data, function(photo){
+                    book.cover = photo;
+                });
+            }
+
             book.save();
             console.log("Saved "+title);
         }
