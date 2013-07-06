@@ -14,7 +14,6 @@ global.previousPage = null;
 require(__dirname + "/server/db.js");
 //include authorization methods
 require(__dirname + "/server/middleware/authorize.js");
-require(__dirname + "/server/core/ExtractorController.js");
 
 var router = require(__dirname + "/server/router.js");
 
