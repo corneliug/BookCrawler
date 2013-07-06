@@ -13,24 +13,19 @@ global.previousPage = null;
 
 require(__dirname + "/server/db.js");
 //include authorization methods
-require(__dirname + "/server/middleware/authorize.js");
 require(__dirname + "/server/core/ExtractorController.js");
-
-var router = require(__dirname + "/server/router.js");
 
 // Define a single-page client called 'main'
 ss.client.define('main', {
     view: 'app.html',
-    css: ['app.css', 'bootstrap.min.css'],
-    code: ['libs/jquery.min.js', 'libs/jquery.masonry.min.js', 'libs/jquery.tinyscrollbar.min.js', 'libs/bootstrap.min.js',
-        'libs/ajaxupload.min.js', 'app'],
+    css: [],
+    code: ['libs/jquery.min.js', 'app'],
     tmpl: '*'
 });
 
 // Router Middleware
 ss.http.middleware.prepend(ss.http.connect.bodyParser());
 ss.http.middleware.prepend(ss.http.connect.query());
-ss.http.middleware.prepend(connectRoute(router));
 
 // Serve this client on the root URL
 ss.http.route('/', function (req, res) {

@@ -10,7 +10,6 @@
     "ss-stylus": "0.1.x",
     "ss-hogan": "0.1.x",
     "socketstream-resource": "x",
-    "jquery-file-upload-middleware": "x",
     "connect": "x",
     "connect-route": "x"
   }

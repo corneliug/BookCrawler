@@ -5,7 +5,7 @@ var libhumanitas_url = require(__dirname + "/libhumanitas-url_extractor");
 var libhumanitas_data = require(__dirname + "/libhumanitas-data_extractor");
 
 //librarie_net_url.start();
-//librarie_net_data.extract();
+librarie_net_data.extract();
 
 //libhumanitas_url.start();
 //libhumanitas_data.extract();
