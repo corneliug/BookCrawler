@@ -8,4 +8,4 @@ var libhumanitas_data = require(__dirname + "/libhumanitas-data_extractor");
 //librarie_net_data.extract();
 
 //libhumanitas_url.start();
-libhumanitas_data.extract();
+//libhumanitas_data.extract();
