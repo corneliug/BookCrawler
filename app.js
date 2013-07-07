@@ -8,9 +8,6 @@ global.ss = require('socketstream');
 global.config = require(__dirname + "/server/config.js");
 global.sanitize = require('validator').sanitize;
 
-global.registeredUser = null;    // the registered user
-global.previousPage = null;
-
 require(__dirname + "/server/db.js");
 //include authorization methods
 require(__dirname + "/server/core/ExtractorController.js");
@@ -26,6 +23,12 @@ ss.client.define('main', {
 // Router Middleware
 ss.http.middleware.prepend(ss.http.connect.bodyParser());
 ss.http.middleware.prepend(ss.http.connect.query());
+
+// Configure Redis for session storage
+//ss.session.store.use('redis', config[ss.env].redis);
+
+// Configure Redis for internal pub/sub
+//ss.publish.transport.use('redis', config[ss.env].redis);
 
 // Serve this client on the root URL
 ss.http.route('/', function (req, res) {

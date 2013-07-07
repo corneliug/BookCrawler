@@ -3,8 +3,8 @@ global.mongoose = require('mongoose');
 global.redis = require('redis');
 
 // Redis Configuration
-// global.redisClient = redis.createClient(config[ss.env].redis.port,config[ss.env].redis.host);
-// redisClient.auth(config[ss.env].redis.pass);
+//global.redisClient = redis.createClient(config[ss.env].redis.port,config[ss.env].redis.host);
+//redisClient.auth(config[ss.env].redis.pass);
 
 
 // MongoDB / Mongoose Configuration
