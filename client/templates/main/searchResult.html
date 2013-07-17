@@ -1,0 +1,15 @@
+<div class="searchResult">
+    <input type="hidden" value="{{ book._id }}">
+    <div class="bookResult">
+        {{book.title}}
+    </div>
+    <div class="authorResult">
+        {{#book.authors}}
+        <div class="bookAuthorResult">
+            {{ name }}
+        </div>
+        {{/book.authors}}
+    </div>
+</div>
+<div class="searchResultSeparator">
+</div>

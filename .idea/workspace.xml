@@ -2,23 +2,28 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/server/controllers/book.js" line="178" />
+    <bookmark url="file://$PROJECT_DIR$/client/code/app/app.js" line="185" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4b5fb88-ffab-4605-8253-1e2318fc5dca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/core/ExtractorController.js" afterPath="$PROJECT_DIR$/server/core/ExtractorController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/resources/data_extractor/bc_authors/libhumanitas-bc_authors.json" afterPath="$PROJECT_DIR$/server/resources/data_extractor/bc_authors/libhumanitas-bc_authors.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/resources/data_extractor/bc_book_offers/libhumanitas-bc_book_offers.json" afterPath="$PROJECT_DIR$/server/resources/data_extractor/bc_book_offers/libhumanitas-bc_book_offers.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/resources/data_extractor/bc_books/libhumanitas-bc_books.json" afterPath="$PROJECT_DIR$/server/resources/data_extractor/bc_books/libhumanitas-bc_books.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/resources/data_extractor/bc_editures/libhumanitas-bc_editures.json" afterPath="$PROJECT_DIR$/server/resources/data_extractor/bc_editures/libhumanitas-bc_editures.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/main/searchResult.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/css/app.css" afterPath="$PROJECT_DIR$/client/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/code/app/app.js" afterPath="$PROJECT_DIR$/client/code/app/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/book.js" afterPath="$PROJECT_DIR$/server/models/book.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/rpc/book.js" afterPath="$PROJECT_DIR$/server/rpc/book.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/main/bookMain.html" afterPath="$PROJECT_DIR$/client/templates/main/bookMain.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/config.js" afterPath="$PROJECT_DIR$/server/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/code/app/entry.js" afterPath="$PROJECT_DIR$/client/code/app/entry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/main/pageLayout.html" afterPath="$PROJECT_DIR$/client/templates/main/pageLayout.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BookCrawler.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1373127996334" ignored="false" />
+    <file path="/Dummy.txt" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1374087270873" ignored="false" />
     <file path="/author.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1368799404168" ignored="false" />
     <file path="/librarie.net-data_extractor.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1372158501098" ignored="false" />
-    <file path="/book.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370594253616" ignored="false" />
-    <file path="/a.dummy" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1373128959337" ignored="false" />
+    <file path="/book.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1373814062451" ignored="false" />
+    <file path="/a.dummy" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1374096936090" ignored="false" />
     <file path="/bookOffer.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370434616677" ignored="false" />
     <file path="/editure.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1368801982983" ignored="false" />
     <file path="/bookCategory.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1368793218589" ignored="false" />
@@ -27,14 +32,14 @@
     <file path="/user.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371994590787" ignored="false" />
     <file path="$PROJECT_DIR$/../../Qualitance/QCV/pom.xml" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1369661315339" ignored="false" />
     <file path="/authenticate.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371702565406" ignored="false" />
-    <file path="/entry.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371652725280" ignored="false" />
-    <file path="/app.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371995508970" ignored="false" />
+    <file path="/entry.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1374097439571" ignored="false" />
+    <file path="/app.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1374097277300" ignored="false" />
     <file path="/authorize.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1369747265225" ignored="false" />
     <file path="/mainPage.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371651867423" ignored="false" />
-    <file path="/app.css" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371995676296" ignored="false" />
+    <file path="/app.css" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1374099084723" ignored="false" />
     <file path="/bookTile.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370284121771" ignored="false" />
     <file path="/photo.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371923733617" ignored="false" />
-    <file path="/bookMain.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1371222315331" ignored="false" />
+    <file path="/bookMain.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1374090594373" ignored="false" />
     <file path="/reviewTile.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370608607443" ignored="false" />
     <file path="/review.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370601797297" ignored="false" />
     <file path="/bootstrap.min.css" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1370941977374" ignored="false" />
@@ -66,6 +71,9 @@
     <file path="$PROJECT_DIR$/../bc_builder/server/core/ExtractorController.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1373128973369" ignored="false" />
     <file path="$PROJECT_DIR$/../bc_extractor/app.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1373132913715" ignored="false" />
     <file path="$PROJECT_DIR$/../bc_extractor/server/core/ExtractorController.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1373132919514" ignored="false" />
+    <file path="/pageLayout.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1373803010400" ignored="false" />
+    <file path="/searchResult.html" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1374089897837" ignored="false" />
+    <file path="/config.js" changelist="d4b5fb88-ffab-4605-8253-1e2318fc5dca" time="1374097157400" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +88,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -114,7 +123,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -124,46 +132,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ExtractorController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/core/ExtractorController.js">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/code/app/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="42" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+            <state line="179" column="42" selection-start="6664" selection-end="6664" vertical-scroll-proportion="-7.357143">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="authorize.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/middleware/authorize.js">
+      <file leaf-file-name="app.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="27" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="libhumanitas-url_extractor.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/core/libhumanitas-url_extractor.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="53" selection-start="1992" selection-end="1992" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="librarie.net-data_extractor.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/core/librarie.net-data_extractor.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="78" selection-start="2328" selection-end="2328" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="author.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/models/author.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="168" selection-end="231" vertical-scroll-proportion="0.0">
+            <state line="229" column="61" selection-start="3451" selection-end="3451" vertical-scroll-proportion="-4.142857">
               <folding />
             </state>
           </provider>
@@ -172,34 +153,70 @@
       <file leaf-file-name="authenticate.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/code/app/authenticate.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="12" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="author.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/rpc/author.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="71" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="router.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/router.js">
-          <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExtractorUtils.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/core/ExtractorUtils.js">
+      <file leaf-file-name="config.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="42" selection-start="303" selection-end="303" vertical-scroll-proportion="0.17123288">
+            <state line="6" column="13" selection-start="150" selection-end="150" vertical-scroll-proportion="0.1300578">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="entry.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/code/app/entry.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="58" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="searchResult.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/templates/main/searchResult.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="24" selection-start="12" selection-end="24" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bookTile.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/templates/main/bookTile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="4" selection-start="27" selection-end="71" vertical-scroll-proportion="-0.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pageLayout.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/templates/main/pageLayout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="25" selection-start="512" selection-end="528" vertical-scroll-proportion="-10.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bookMain.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/templates/main/bookMain.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="90" selection-start="509" selection-end="509" vertical-scroll-proportion="-9.375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="77" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -223,22 +240,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/client/templates/bootstrap/passwordFieldsNotFilledIn.html" />
-        <option value="$PROJECT_DIR$/client/templates/bootstrap/profileUpdated.html" />
-        <option value="$PROJECT_DIR$/client/templates/bootstrap/passwordChanged.html" />
-        <option value="$PROJECT_DIR$/client/templates/bootstrap/profileUpdateError.html" />
-        <option value="$PROJECT_DIR$/server/router.js" />
-        <option value="$PROJECT_DIR$/server/models/user.js" />
-        <option value="$PROJECT_DIR$/client/templates/main/profilePage.html" />
-        <option value="$PROJECT_DIR$/client/code/app/app.js" />
-        <option value="$PROJECT_DIR$/client/templates/main/bookMain.html" />
-        <option value="$PROJECT_DIR$/client/css/app.css" />
         <option value="$PROJECT_DIR$/server/core/librarie.carturesti-url_extractor.js" />
         <option value="$PROJECT_DIR$/server/core/libris-url_extractor.js" />
         <option value="$PROJECT_DIR$/server/core/libhumanitas-url_extractor.js" />
         <option value="$PROJECT_DIR$/server/core/librarie.net-data_extractor.js" />
         <option value="$PROJECT_DIR$/server/core/libhumanitas-data_extractor.js" />
         <option value="$PROJECT_DIR$/server/core/ExtractorController.js" />
+        <option value="$PROJECT_DIR$/client/templates/main/pageLayout.html" />
+        <option value="$PROJECT_DIR$/server/rpc/book.js" />
+        <option value="$PROJECT_DIR$/server/models/book.js" />
+        <option value="$PROJECT_DIR$/client/templates/main/searchResult.html" />
+        <option value="$PROJECT_DIR$/client/templates/main/bookMain.html" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/client/code/app/entry.js" />
+        <option value="$PROJECT_DIR$/client/code/app/app.js" />
+        <option value="$PROJECT_DIR$/client/css/app.css" />
+        <option value="$PROJECT_DIR$/server/config.js" />
       </list>
     </option>
   </component>
@@ -276,8 +293,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -307,6 +324,140 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -476,11 +627,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1772288" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2244898" sideWeight="0.9944598" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -494,11 +646,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21218836" sideWeight="0.9699248" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21218836" sideWeight="0.7755102" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2244898" sideWeight="0.9944598" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -557,7 +708,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -565,76 +716,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/css/app.css">
+    <entry file="file://$PROJECT_DIR$/client/templates/main/reviewTile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="17" selection-start="1937" selection-end="1937" vertical-scroll-proportion="0.35784313" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/core/librarie.net-url_extractor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.84375" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/resources/url_extractor/libhumanitas_urls.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="43" selection-start="2429475" selection-end="2429475" vertical-scroll-proportion="0.57416266" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/book.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="4" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/core/libhumanitas-data_extractor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="177" column="67" selection-start="7039" selection-end="7039" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/middleware/authorize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="27" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/core/ExtractorController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="42" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/resources/url_extractor/librarie.net_urls.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="128" selection-start="94" selection-end="24908" vertical-scroll-proportion="0.016891891" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/core/libhumanitas-url_extractor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="53" selection-start="1992" selection-end="1992" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/core/librarie.net-data_extractor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="78" selection-start="2328" selection-end="2328" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/author.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="168" selection-end="231" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/code/app/authenticate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="12" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -646,23 +730,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/router.js">
+    <entry file="file://$PROJECT_DIR$/server/models/author.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="47" selection-start="333" selection-end="333" vertical-scroll-proportion="0.28301886">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/rpc/book.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="68" selection-start="1255" selection-end="1255" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/book.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="34" selection-start="368" selection-end="387" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/main/bookTile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="4" selection-start="27" selection-end="71" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/main/searchResult.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="24" selection-start="12" selection-end="24" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/db.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/resources/data_extractor/bc_authors/librarie.net-bc_authors.json">
+    <entry file="file://$PROJECT_DIR$/client/templates/main/bookMain.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="70" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0">
+        <state line="15" column="90" selection-start="509" selection-end="509" vertical-scroll-proportion="-9.375">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/core/ExtractorUtils.js">
+    <entry file="file://$PROJECT_DIR$/client/code/app/entry.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="42" selection-start="303" selection-end="303" vertical-scroll-proportion="0.17123288">
+        <state line="22" column="58" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/code/app/authenticate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/main/pageLayout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="25" selection-start="512" selection-end="528" vertical-scroll-proportion="-10.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/code/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="179" column="42" selection-start="6664" selection-end="6664" vertical-scroll-proportion="-7.357143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="229" column="61" selection-start="3451" selection-end="3451" vertical-scroll-proportion="-4.142857">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="77" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="150" selection-end="150" vertical-scroll-proportion="0.1300578">
           <folding />
         </state>
       </provider>

@@ -7,9 +7,11 @@ exports.initComponents = function(){
     ss.rpc("user.ensureAuthenticated", '', function(authenticated){
         if(authenticated){
             var main = ss.tmpl['main-pageLayout'].render();
-            $("#mainContainer").html(main);
 
-            showMainPage(windowWidth, windowHeight);
+            setTimeout(function(){
+                $("#mainContainer").html(main);
+                showMainPage(windowWidth, windowHeight);
+            }, 1000);
         } else {
             $("#mainContainer").css("margin-top", windowHeight/4+20);
             $("#mainContainer").css("margin-left", windowWidth/3);
@@ -21,6 +23,10 @@ exports.initComponents = function(){
 }
 
 showMainPage = function (windowWidth, windowHeight) {
+    $("#mainContainer").css("margin-top", 0);
+    $("#mainContainer").css("margin-left", 0);
+    $("#mainContainer").css("width", 0)
+
     ss.rpc("user.getRegisteredUser", "", function (user) {
         closeOptions();
         var main = ss.tmpl['main-mainPage'].render();
@@ -74,15 +80,16 @@ showMainPage = function (windowWidth, windowHeight) {
             });
         }, 500);
 
-        setTimeout(function () {
-            $('#tilesContainer').masonry({
+        $('#tilesContainer').masonry({
                 itemSelector: '.bookTile',
                 columnWidth: 10,
                 animationOptions: {
                     duration: 400
                 }
-            });
-        }, 500);
+         });
+
+        $("#tilesContainer").show();
+        $('#tilesContainer').tinyscrollbar();
     });
 }
 
@@ -171,6 +178,11 @@ showProfilePage = function(user){
         $("body").css("background-image", "");
 
         closeOptions();
+
+        $("#content").css("margin-top", windowHeight/4+20);
+        $("#content").css("margin-left", windowWidth/3);
+        $("#content").css("width", 500);
+
         $("#content").html(profilePage);
 
         $(".profileItemEdit").click(function(){
@@ -334,7 +346,34 @@ showActionBar = function (windowWidth, user) {
             ss.rpc("user.logout", "", function(){
             });
 
+            $("#mainContainer").css("margin-top", windowHeight/4+20);
+            $("#mainContainer").css("margin-left", windowWidth/3);
+            $("#mainContainer").css("width", 500);
+
             showLogin();
+        });
+
+        $("#searchBar input").keyup(function(){
+            var searchText = $(this).val();
+            clearSearchResults();
+
+            ss.rpc("book.findByTitleRegex", searchText, function(books){
+                for(var i=0; i<books.length; i++){
+                    addBookToSearchResults(books[i]);
+                }
+
+                $("#searchBarContent .searchResultSeparator:last").remove();
+
+                $("#searchBarContent").show();
+
+                $(".searchResult").on("click", function(){
+                    $("#searchBarContent").hide();
+                    $("#searchBar input").val("");
+
+                    var id = $(this).children("input[type='hidden']").val();
+                    showBookPage(id);
+                });
+            });
         });
 
     } else {
@@ -357,4 +396,15 @@ toggleContextualMenu = function(){
         $("#contextualMenu").show();
         contextMenuOpened = true;
     }
+}
+
+var clearSearchResults = function(){
+    $("#searchBarContent").html("");
+}
+
+var addBookToSearchResults = function(book){
+    //authors+=book.authors[book.authors.length].name;
+
+    var tile = ss.tmpl['main-searchResult'].render({book: book});
+    $("#searchBarContent").append(tile);
 }

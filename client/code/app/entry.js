@@ -21,7 +21,7 @@ ss.server.on('ready', function(){
     require('/authenticate');
     var appJs = require('/app');
 
-	appJs.initComponents();
+	setTimeout(appJs.initComponents(), 1000);
   });
 
 });

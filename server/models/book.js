@@ -75,6 +75,18 @@ Book.static('findByTitle', function (title, callback) {
         });
 });
 
+Book.static('findByTitleRegex', function (title, callback) {
+    this.find({
+        title: new RegExp(title, 'i')
+    }).populate('authors').populate('categories').populate('bookOffers').populate('cover').exec(function (err, books) {
+            if (err) {
+                return callback(err, null);
+            } else {
+                return callback(null, books);
+            }
+        });
+});
+
 /**
  *    Retrieves all the books from the database.
  *

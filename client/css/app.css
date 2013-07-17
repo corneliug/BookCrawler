@@ -72,17 +72,121 @@ body {
 #searchBar {
     position: relative;
     float: right;
-    right: -140px;
+    right: -100px;
     height: 30px;
     top: 10px;
+}
+
+.searchResult {
+    height: 70px;
+    width: 340px;
+}
+
+.searchResult:hover {
+    cursor: pointer;
+    background-color: #C0C0C0;
+}
+
+.authorResult {
+    margin-top: 5px;
+    margin-left: 20px;
+    color: orange;
+}
+
+.searchResultSeparator {
+    height: 3px;
+    width: 180px;
+    margin-left: 40px;;
+    background-color: #000000;
+}
+
+.bookResult {
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#searchBarContent {
+    display: none;
+    width: 340px;
+    max-height: 550px;
+    float: right;
+    position: fixed;
+    top: 62px;
+    right: -98px;
+    background-color: #757172;
 }
 
 #loginError {
     display: none;
 }
 
+#content {
+    width:600px;
+    height: 800px;
+}
+
 #tilesContainer {
+    display: none;
     top: 80px;
+    width:600px;
+    height: 800px;
+    clear: both;
+    /*overflow: hidden;*/
+}
+
+#tilesContainer .viewport {
+    width: 400px;
+    height:500px;
+    max-height: 760px;
+    overflow: hidden;
+    position: relative;
+}
+
+#tilesContainer .overview {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#tilesContainer .thumb .end,
+#tilesContainer .thumb {
+    background-color: #003D5D;
+}
+
+#tilesContainer .scrollbar {
+    position: relative;
+    float: right;
+    width: 15px;
+}
+
+#tilesContainer .track {
+    background-color: #D8EEFD;
+    height: 100%;
+    width:13px;
+    position: relative;
+    padding: 0 1px;
+}
+
+#tilesContainer .thumb {
+    height: 20px;
+    width: 13px;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+}
+
+#tilesContainer .thumb .end {
+    overflow: hidden;
+    height: 5px;
+    width: 13px;
+}
+
+#tilesContainer .disable {
+    display: none;
 }
 
 #ocTitlu {
@@ -133,10 +237,9 @@ body {
 }
 
 #bookTitleC {
-    /*position:absolute;*/
     margin-left: 50px;
-    /*margin-top: 50px;*/
     font-size: 30px;
+    width: 700px;
 }
 
 .bookAuthorC {
@@ -218,6 +321,7 @@ body {
 #bookCover {
     margin-left: 200px;
     margin-top: 20px;
+    width: 170px;
 }
 
 #offers {
@@ -253,19 +357,10 @@ body {
 }
 
 #reviewsContainer {
-    /*display: none;*/
-    /*float: right;*/
-    /*margin-right: 130px;*/
-    /*width: 400px;*/
-    /*height:500px;*/
-    /*max-height: 760px;*/
-    /*overflow-y: scroll;*/
-}
-
-#reviewsContainer {
     display: none;
+    position: fixed;
     float: right;
-    margin-right: 130px;
+    right: 40px;
     width: 400px;
     height:500px;
     max-height: 760px;

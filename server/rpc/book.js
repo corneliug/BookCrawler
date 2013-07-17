@@ -48,6 +48,20 @@ exports.actions = function (req, res, ss) {
         },
 
         /**
+         *  Retrieves books from the db, matched by title.
+         *
+         * */
+        findByTitleRegex: function (title) {
+            Book.findByTitleRegex(title, function (err, books) {
+                if (err || books == null) {
+                    return res('heresy');
+                } else {
+                    return res(books);
+                }
+            });
+        },
+
+        /**
          *  Updates the details of a book.
          *
          * */
